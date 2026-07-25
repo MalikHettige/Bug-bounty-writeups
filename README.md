@@ -3,10 +3,15 @@ Writeups from my bug bounty hunting practice and live findings. Focus: IDOR, bro
 
 ## What's in here
 - `portswigger-labs/` — PortSwigger Web Security Academy writeups, organized by vulnerability category.
-- `hacker101-ctf/` — Hacker101 CTF writeups, notes, and flag solutions.
-- `live-findings/` — Publicly disclosed or sanitized writeups from real-world VDP and bug bounty programs.
-- `writeup-template.md` — Standard template used for documenting labs and real-world findings.
-- `README.md` — Repository overview, structure, and goals.
+- `hack-the-box-academy/` — Academy module notes and hands-on labs.
+- `tryhackme/` — Web Fundamentals and web security learning notes.
+- `pentesterlab/` — PentesterLab exercise writeups and notes.
+- `overthewire/` — Linux and command-line challenge writeups.
+- `burp-suite-certified-practitioner/` — Exam preparation notes, labs, and methodology.
+- `bug-hunter-skill-progression/` — Personal roadmap, checklists, and progress tracking.
+- `random-lessons/` — Security concepts, research notes, and miscellaneous documentation.
+- `writeup-template.md` — Standard template used for documenting writeups.
+- `README.md` — Repository overview and structure.
 - `LICENSE` — MIT License for this repository.
 - `.gitignore` — Excludes unnecessary files from version control.
   
