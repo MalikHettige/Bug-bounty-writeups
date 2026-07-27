@@ -33,11 +33,18 @@ This repo serves as my central knowledge base, documentation hub, and portfolio 
 
 ## 📊 Progress Tracker
 
-| Week | Date Range     | Goals Completed                          | Labs Done |
-|------|----------------|------------------------------------------|---------|-------------------|----------|-------|
-| 1    | Jul 20 – 26   | Set up repo + all local labs (Juice Shop, DVWA, bWAPP) + complete remaining PortSwigger Access Control labs | 4 | 
-| 3    | ...           | - | - | 
-| ...  | ...           | ...                                      | ...     | 
+| Week (Date Range) | Labs Done | Notes |
+|-------------------|----------:|-------|
+| Week 1 (Jul 20 – Jul 26) | 4 | Finished remaining Access Control labs. |
+| Week 2 (Jul 27 – Aug 2) | - | - |
+| Week 3 (Aug 3 – Aug 9) | - | - |
+| Week 4 (Aug 10 – Aug 16) | - | - |
+| Week 5 (Aug 17 – Aug 23) | - | - |
+| Week 6 (Aug 24 – Aug 30) | - | - |
+| Week 7 (Aug 31 – Sep 6) | - | - |
+| Week 8 (Sep 7 – Sep 13) | - | - |
+| Week 9 (Sep 14 – Sep 20) | - | - |
+| Week 10 (Sep 21 – Sep 27) | - | - |
 
 **Current Total Accepted on HackerOne**: X / 30
 
