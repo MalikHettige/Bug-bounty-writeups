@@ -33,16 +33,16 @@ This repo serves as my central knowledge base, documentation hub, and portfolio 
 
 ## 📊 Progress Tracker
 
-| Week | Date Range     | Goals Completed                          | Labs Done | Reports Submitted | Accepted | Notes |
+| Week | Date Range     | Goals Completed                          | Labs Done |
 |------|----------------|------------------------------------------|---------|-------------------|----------|-------|
-| 1    | Jul 20 – 26   | Set up repo + all local labs (Juice Shop, DVWA, bWAPP) + complete remaining PortSwigger Access Control labs | - | - | - | - |
-| 2    | Jul 27 – Aug 2| - | 4 | - | - | - |
-| 3    | ...           | - | - | - | - | - |
-| ...  | ...           | ...                                      | ...     | ...               | ...      | ... |
+| 1    | Jul 20 – 26   | Set up repo + all local labs (Juice Shop, DVWA, bWAPP) + complete remaining PortSwigger Access Control labs | 4 | 
+| 3    | ...           | - | - | 
+| ...  | ...           | ...                                      | ...     | 
 
 **Current Total Accepted on HackerOne**: X / 30
 
-**Last Updated**: July 20, 2026
+**Created**: July 20, 2026
+**Last Updated**: July 27, 2026
 
 ---
 
