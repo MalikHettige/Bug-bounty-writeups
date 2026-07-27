@@ -34,7 +34,6 @@ Observe that the `RoleID`parameter shows in the responses and results 1
 **Proof of Concept**
 
 <aside>
-💡
 
 `{`
 
