@@ -14,7 +14,7 @@ The goal isn't simply to record solutions.
 
 ---
 
-# 🎯 Goals
+# What I aim for
 
 My goals for this repository are to:
 
@@ -31,14 +31,14 @@ My goals for this repository are to:
 
 ---
 
-# 📚 Progress
+# Progress
 
 | Tier | Completed | Status |
 |---|---:|---|
-| Tier 0 | 2 | 🟢 In Progress |
-| Tier 1 | 0 | ⚪ Not Started |
-| Tier 2 | 0 | ⚪ Not Started |
-| Tier 3 | 0 | ⚪ Not Started |
+| Tier 0 | 2 | In Progress |
+| Tier 1 | 0 | Not Started |
+| Tier 2 | 0 | Not Started |
+| Tier 3 | 0 | Not Started |
 
 ### Current Progress
 
@@ -63,7 +63,7 @@ My goals for this repository are to:
 
 ---
 
-# 🧠 Topics Covered
+# Topics Covered
 
 As this repository grows, the topics will include:
 
@@ -154,9 +154,7 @@ As this repository grows, the topics will include:
 
 ---
 
-# 🛠️ Tools
-
-Tools I expect to use throughout the journey:
+# Tools I expect to use throughout the journey:
 
 - Nmap
 - Burp Suite
@@ -177,16 +175,12 @@ Tools I expect to use throughout the journey:
 - Hashcat
 - Linux command-line utilities
 - PowerShell
-
-The goal is not to memorize tools individually, but to understand **when and why each tool is useful**.
-
+  
 ---
 
-# 🔎 Enumeration Methodology
+# One of the main skills I am developing is a repeatable enumeration process.
 
-One of the main skills I am developing is a repeatable enumeration process.
-
-A simplified methodology:
+A simplified methodology (what I do) :
 
 ```text
 1. Identify target
