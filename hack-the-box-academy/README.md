@@ -1,71 +1,218 @@
 # Hack The Box Writeups
 
-A collection of my **Hack The Box (HTB)** writeups as I build practical skills in offensive security.
+![Hack The Box](https://img.shields.io/badge/Hack%20The%20Box-Writeups-9FEF00?style=flat&logo=hackthebox&logoColor=black)
+![Focus](https://img.shields.io/badge/Focus-Offensive%20Security-red)
+![Status](https://img.shields.io/badge/Status-In%20Progress-yellow)
 
-The goal of this repository is to document not only the solutions, but also the **reasoning, mistakes, techniques, and lessons learned** along the way.
+A personal collection of my **Hack The Box (HTB)** machine, challenge, and module writeups as I develop practical offensive security skills.
 
-## Goals
+This repository documents my progression from fundamental concepts and beginner machines toward more advanced penetration-testing techniques.
 
-* Build strong offensive security fundamentals
-* Improve network and service enumeration
-* Develop practical penetration-testing skills
-* Understand common attack paths
-* Become comfortable with tools such as Nmap and Burp Suite
-* Progress from beginner HTB content to advanced machines
+The goal isn't simply to record solutions.
 
-## Progress
+> **The objective is to understand the attack path, the reasoning behind each step, and why the vulnerability exists.**
 
-| Tier   | Completed |
-| ------ | --------: |
-| Tier 0 |         2 |
-| Tier 1 |         0 |
-| Tier 2 |         0 |
-| Tier 3 |         0 |
+---
 
-## Writeups
+# 🎯 Goals
 
-### Tier 0
+My goals for this repository are to:
 
-* [Meow](./Tier-0/Meow/) — Network Enumeration / Telnet
-* [Fawn](./Tier-0/Fawn/) — FTP / Anonymous Access
+- Build strong offensive security fundamentals
+- Develop a consistent enumeration methodology
+- Understand common network services
+- Improve Linux and Windows security knowledge
+- Become comfortable with common penetration-testing tools
+- Learn how vulnerabilities translate into practical attack paths
+- Develop better problem-solving skills
+- Document mistakes instead of hiding them
+- Progress from beginner HTB content toward advanced machines
+- Build a public record of my practical cybersecurity development
 
-## Topics
+---
 
-* Network Enumeration
-* Nmap
-* TCP/IP
-* Common Network Services
-* FTP
-* Telnet
-* SSH
-* Service & Version Detection
-* Linux Fundamentals
-* Windows Fundamentals
-* Web Security
-* Privilege Escalation
+# 📚 Progress
 
-## Writeup Methodology
+| Tier | Completed | Status |
+|---|---:|---|
+| Tier 0 | 2 | 🟢 In Progress |
+| Tier 1 | 0 | ⚪ Not Started |
+| Tier 2 | 0 | ⚪ Not Started |
+| Tier 3 | 0 | ⚪ Not Started |
 
-For each HTB challenge, I aim to document:
+### Current Progress
 
-1. **Enumeration**
-2. **Interesting findings**
-3. **Attack path**
-4. **Commands and tools used**
-5. **Why the technique worked**
-6. **Mistakes and dead ends**
-7. **Lessons learned**
+**Machines completed:** 2
 
-The objective is to understand **why** an attack works rather than simply memorize commands.
+**Current focus:** Offensive Security Fundamentals
 
-## Learning Philosophy
+**Current tier:** Tier 0
 
-> **Don't just complete the machine. Understand the attack path.**
+---
 
-Mistakes are kept when they provide a useful lesson, because documenting what went wrong is part of improving my methodology.
+# 🧪 Writeups
 
-## Disclaimer
+## Tier 0
 
-All testing documented in this repository is performed against **authorized Hack The Box environments**.
+### Machines
 
-**Tags:** `#HackTheBox` `#HTB` `#CyberSecurity` `#PenetrationTesting` `#OffensiveSecurity`
+| Machine | Difficulty | Primary Concepts | Writeup |
+|---|---|---|---|
+| Meow | Easy | Nmap, Telnet, Remote Access | [View Writeup](./Tier-0/Meow/) |
+| Fawn | Easy | Nmap, FTP, Anonymous Access | [View Writeup](./Tier-0/Fawn/) |
+
+---
+
+# 🧠 Topics Covered
+
+As this repository grows, the topics will include:
+
+### Reconnaissance & Enumeration
+
+- Nmap
+- Port scanning
+- Service enumeration
+- Version detection
+- Operating-system detection
+- NSE scripts
+- Full-port scanning
+- Network reconnaissance
+
+### Networking
+
+- TCP/IP
+- TCP ports
+- UDP
+- DNS
+- HTTP/HTTPS
+- FTP
+- SSH
+- Telnet
+- SMB
+- RDP
+- SMTP
+- SNMP
+
+### Linux
+
+- Linux filesystem
+- Permissions
+- Users and groups
+- Processes
+- Services
+- SUID/SGID
+- Cron
+- Environment variables
+- PATH manipulation
+- Linux privilege escalation
+
+### Windows
+
+- Windows filesystem
+- Users and groups
+- Services
+- PowerShell
+- Windows permissions
+- Registry
+- Scheduled tasks
+- Windows privilege escalation
+- Active Directory
+
+### Web Security
+
+- HTTP
+- Authentication
+- Authorization
+- IDOR/BOLA
+- SQL injection
+- XSS
+- SSRF
+- File inclusion
+- Command injection
+- File upload vulnerabilities
+- Business logic
+- API security
+
+### Exploitation
+
+- Public exploits
+- Manual exploitation
+- Proof of concept development
+- Shells
+- Reverse shells
+- Payloads
+- Exploit modification
+
+### Post-Exploitation
+
+- Enumeration after initial access
+- Credential discovery
+- Privilege escalation
+- Persistence concepts
+- Lateral movement
+- Data discovery
+
+---
+
+# 🛠️ Tools
+
+Tools I expect to use throughout the journey:
+
+- Nmap
+- Burp Suite
+- Netcat
+- Gobuster
+- ffuf
+- Feroxbuster
+- Nikto
+- WhatWeb
+- SQLmap
+- Metasploit
+- Impacket
+- Responder
+- BloodHound
+- CrackMapExec / NetExec
+- Wireshark
+- John the Ripper
+- Hashcat
+- Linux command-line utilities
+- PowerShell
+
+The goal is not to memorize tools individually, but to understand **when and why each tool is useful**.
+
+---
+
+# 🔎 Enumeration Methodology
+
+One of the main skills I am developing is a repeatable enumeration process.
+
+A simplified methodology:
+
+```text
+1. Identify target
+        ↓
+2. Confirm scope
+        ↓
+3. Discover open ports
+        ↓
+4. Identify services
+        ↓
+5. Identify versions
+        ↓
+6. Enumerate interesting services
+        ↓
+7. Identify attack surface
+        ↓
+8. Form hypotheses
+        ↓
+9. Test hypotheses
+        ↓
+10. Gain initial access
+        ↓
+11. Enumerate from inside
+        ↓
+12. Privilege escalation
+        ↓
+13. Capture flags
+        ↓
+14. Document the attack path
