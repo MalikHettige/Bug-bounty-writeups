@@ -1,5 +1,7 @@
 **Lab:** PortSwigger Web Security Academy
 
+[Lab: 2FA simple bypass](https://portswigger.net/web-security/authentication/multi-factor/lab-2fa-simple-bypass)
+
 This lab's two-factor authentication can be bypassed. You have already obtained a valid username and password, but do not have access to the user's 2FA verification code. To solve the lab, access Carlos's account page.
 
 **Date Solved:** 2026-08-21
