@@ -39,14 +39,11 @@ The following image shows the unanswered code prompt, and that it loaded `/my-ac
 <img width="1460" height="736" alt="image" src="https://github.com/user-attachments/assets/297793c8-3d40-42df-87c3-1dc7be4a8c0a" />
 
 
-**Note**
-
-This endpoint did not enforce a Referer check. Worth stating explicitly: even if one had been present, it wouldn't have been an effective control — Referer is a client-controlled header, freely set to any value in Repeater 
+**Note**: This endpoint did not enforce a Referer check. Worth stating explicitly: even if one had been present, it wouldn't have been an effective control — Referer is a client-controlled header, freely set to any value in Repeater 
 
 ```nix
 Referer: https://<host>/login2
 ```
-
 Its absence here isn't the vulnerability; it's mentioned only to preempt the question of whether a superficial header check would have stopped this.
 
 ## Root Cause
