@@ -18,13 +18,8 @@ Focus Areas:
 - Writeups/      → Draft and polished write-ups
 - Reports/       → HackerOne feedback and analysis
 
-📊 Progress Tracker
-Week       | Date Range     | Labs Done | Reports Analyzed | Live Tests | Notes
------------|----------------|-----------|------------------|------------|------
-Week 1     | Jul 21 – 27    |           |                  |            | 
-...        |                |           |                  |            | 
 
-Current Total Authentication-related Submissions: X
+Current Total Authentication-related Submissions: 1 (Duplicate - Report Intent #252496 Unauthenticated access to /api/Common/Audit endpoint allows audit log manipulation)
 
 Last Updated: July 21, 2026
 
