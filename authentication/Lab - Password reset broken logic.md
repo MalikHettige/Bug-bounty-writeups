@@ -48,6 +48,7 @@ temp-forgot-password-token=&username=carlos&new-password-1=password123&new-passw
 Logging in with the credentials carlos:password123 grants full access to Carlos’s account, confirming complete account takeover.
 ## Root Cause
 
+The application uses a client-controlled cookie (verify) to determine which user’s 2FA code should be validated. This value is not bound to the server-side session that completed the password authentication step. As a result, an attacker can set verify=carlos, force the generation of a 2FA code for the victim, and brute-force the code without ever knowing the victim’s password.
 ## Impact
 
 - **Technical:** Any authenticated user (or an attacker who can trigger a password reset) can reset the password of arbitrary accounts without knowing the victim’s reset token or current password.
