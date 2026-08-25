@@ -48,6 +48,7 @@ When `username=carlos`was set along with
 The two possible outcomes are either
 
 Wrong current password → response contains "Current password is incorrect"  or
+
 Correct current password → response contains "**`New passwords do not match`**" 
 
 1. Find the correct password in the results
