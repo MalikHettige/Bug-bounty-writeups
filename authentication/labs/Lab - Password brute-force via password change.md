@@ -27,11 +27,11 @@ Note that the mismatched new passwords prevent the account-locking behavior that
 
 1. In ZAP’s History tab, look for the affected component request 
 
-History tab is one of top tabs and it is easier to locate the request when sort out with Method
+History tab is located in one of top tabs. Sort out Method to find the POST request easily.
 
-1. Click the request and then click request in main toolbar 
-2. Right click the Request and click ‘Open in requester lab’ or Ctrl + W
-3. In requester tab, replace the username value with the victim’s — from wiener to `carlos`
+1. Click the POST request and then go to request in main toolbar 
+2. Right click the Request body and click ‘Open in requester lab’ or Ctrl + W
+3. In requester tab, replace the username value with the victim’s (from wiener to `carlos`)
 4. Click send button, right click that request again and click Fuzz 
 5. In the Fuzzer window, select the value of `current-password=` , click add 
 6. After payload window appears click add again 
