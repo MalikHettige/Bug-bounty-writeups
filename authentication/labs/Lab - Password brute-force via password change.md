@@ -42,6 +42,7 @@ History tab is located in one of top tabs. Sort out Method to find the POST requ
 When `username=carlos`was set along with 
 
 `current-password=<the_payload_from_the_candidate_list)>`,
+
 `new-password-1` and `new-password-2` to **two different values**.
 
 The two possible outcomes are either
