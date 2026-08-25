@@ -51,11 +51,11 @@ Wrong current password → response contains "Current password is incorrect"  or
 
 Correct current password → response contains "**`New passwords do not match`**" 
 
-1. Find the correct password in the results
+10. Find the correct password in the results
 - Click the column header `Size Resp. Body`to sort the results.
 - Look for the one row that has a different size and click it
 - Go to response tab, click anywhere inside the Response Body and search or just Ctrl+F for the phrase “`New passwords do not match.`”
-1. After confirming, right click the the response body and click Open URL in Browser + select the browser (Firefox would be a good choice)
+11. After confirming, right click the the response body and click Open URL in Browser + select the browser (Firefox would be a good choice)
 
 ### **Proof of Concept**
 
