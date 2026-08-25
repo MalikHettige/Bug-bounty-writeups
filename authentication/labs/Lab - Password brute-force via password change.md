@@ -4,7 +4,7 @@
 
 **Difficulty:** Practitioner 
 
-**Severity**: High — CVSS 8.1 (High, lab-context assessment)
+**Severity**: High — CVSS 8.1 (High)
 
 ## Summary
 The password-change endpoint leaks whether the supplied current password is valid through distinguishable responses. By fuzzing the current-password parameter and identifying the response anomaly, an attacker can brute-force the victim’s password and potentially achieve account takeover.
