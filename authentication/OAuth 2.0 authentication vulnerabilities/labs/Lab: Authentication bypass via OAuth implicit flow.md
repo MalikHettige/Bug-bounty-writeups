@@ -77,7 +77,8 @@ X-Frame-Options: SAMEORIGIN
 Content-Length: 0
 ```
 
-!image.png
+<img width="1919" height="260" alt="image" src="https://github.com/user-attachments/assets/18d81210-27b6-4061-9a62-78901282070d" />
+
 
 ## Root Cause
 
