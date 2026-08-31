@@ -64,5 +64,5 @@ Writeups from my bug bounty hunting practice and live findings. Focus: IDOR, bro
 - Intigriti (active from January 2027)
 
 ## Contact
-- X: https://x.com/MalikDisha8108
+- X: https://x.com/MalikHettige
 - Email: Malikdishan09@gmail.com
