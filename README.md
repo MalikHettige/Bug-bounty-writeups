@@ -22,7 +22,7 @@ Writeups from my bug bounty hunting practice and live findings. Focus: IDOR, bro
 - [Classic Request Smuggling (do this before the CRLF paper)](https://portswigger.net/web-security/request-smuggling)
 - [SSTI Basics (do this before the blind-detection paper)](https://portswigger.net/web-security/server-side-template-injection)
 
-### Learning paths from PortSwigger, tiered
+# Learning paths from PortSwigger, tiered
 
 | Priority | Path | Why it matters here |
 | --- | --- | --- |
@@ -52,7 +52,7 @@ Writeups from my bug bounty hunting practice and live findings. Focus: IDOR, bro
 - **SAML:** I study OWASP's SAML Security Cheat Sheet and the [SAML Raider](https://github.com/CompassSecurity/SAMLRaider) Burp extension documentation.
 - **ORM-Leak:** I read Django's and Prisma's official query/filter documentation first so I understand correct filter behavior before studying how it can be abused.
 
-## Execution Plan
+# Execution Plan
 
 - **This week:** I join one CTF team through CTFtime and publish my Django-lab work as a short public writeup, even if it's rough. I'm building my connections track alongside my technical development.
 - **Next 2 weeks:** I build and test the ORM-Leak lab on my Django environment, starting with the filter-driven endpoint.
