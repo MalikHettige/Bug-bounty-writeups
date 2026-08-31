@@ -38,6 +38,11 @@ Writeups from my bug bounty hunting practice and live findings. Focus: IDOR, bro
 | P2 | SSRF | Cloud/internal pivoting — matches interests I've already shown |
 | P2 | Insecure deserialization | General "reach RCE through object handling" pattern, complements the RCE course already in my Notion |
 
+- [PortSwigger Research](https://portswigger.net/research) — I check this at least once a month to stay current with new web security research.
+- [PortSwigger Research RSS](https://portswigger.net/research/rss) — I keep this in a feed reader so I don't rely on remembering to check manually.
+- [Top 10 Web Hacking Techniques of 2025](https://portswigger.net/research/top-10-web-hacking-techniques-of-2025) — I read the entire list, including the rejected nominees at the bottom, to see what techniques researchers are exploring.
+- **r/websecurityresearch** — I search this subreddit directly for community research, techniques, and discussions.
+  
 ## Platforms
 - Bugcrowd  (active from January 2027)
 - HackerOne (active from January 2027)
