@@ -3,7 +3,7 @@ Writeups from my bug bounty hunting practice and live findings. Focus: IDOR, bro
 
 ## What's in here
 - `portswigger-labs/` — PortSwigger Web Security Academy writeups, organized by vulnerability category.
-- - [Hack The Box Academy](https://github.com/MalikHettige/Bug-bounty-writeups/tree/main/hack-the-box-academy) — Academy module notes and hands-on labs.
+- [Hack The Box Academy](https://github.com/MalikHettige/Bug-bounty-writeups/tree/main/hack-the-box-academy) — Academy module notes and hands-on labs.
 - `tryhackme/` — Web Fundamentals and web security learning notes.
 - `pentesterlab/` — PentesterLab exercise writeups and notes.
 - `overthewire/` — Linux and command-line challenge writeups.
