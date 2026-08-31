@@ -15,11 +15,12 @@ Writeups from my bug bounty hunting practice and live findings. Focus: IDOR, bro
 - `LICENSE` — MIT License for this repository.
 - `.gitignore` — Excludes unnecessary files from version control.
   
-## Vulnerability Focus
-- Broken Access Control
-- Authentication Bypass
-- IDOR
-- Business Logic
+## Vulnerability Focus (the foundation)
+- [Auth](https://app.notion.com/p/AUTH-aggressive-observation-camp-Tuesday-July-21-2026-3a4e49cc28c880e4a831d7e1b1eea247?source=copy_link)
+- [Business Logic](https://app.notion.com/p/Business-Logic-aggressive-observation-camp-Tuesday-July-22-2026-3a5e49cc28c8806093e0f0c8c9647ac8?source=copy_link)
+- [Access Control (keep warm)](https://app.notion.com/p/IDOR-aggressive-observation-camp-Monday-July-20-2026-3a3e49cc28c88081835be44766bfa524?source=copy_link)
+- [Classic Request Smuggling (do this before the CRLF paper)](https://portswigger.net/web-security/request-smuggling)
+- [SSTI Basics (do this before the blind-detection paper)](https://portswigger.net/web-security/server-side-template-injection)
 
 ### Learning paths from PortSwigger, tiered
 
