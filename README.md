@@ -21,7 +21,7 @@ Writeups from my bug bounty hunting practice and live findings. Focus: IDOR, bro
 - IDOR
 - Business Logic
 
-  ### Learning paths from PortSwigger, tiered
+### Learning paths from PortSwigger, tiered
 
 | Priority | Path | Why it matters here |
 | --- | --- | --- |
