@@ -38,11 +38,26 @@ Writeups from my bug bounty hunting practice and live findings. Focus: IDOR, bro
 | P2 | SSRF | Cloud/internal pivoting — matches interests I've already shown |
 | P2 | Insecure deserialization | General "reach RCE through object handling" pattern, complements the RCE course already in my Notion |
 
+# Tracking pipeline
 - [PortSwigger Research](https://portswigger.net/research) — I check this at least once a month to stay current with new web security research.
 - [PortSwigger Research RSS](https://portswigger.net/research/rss) — I keep this in a feed reader so I don't rely on remembering to check manually.
 - [Top 10 Web Hacking Techniques of 2025](https://portswigger.net/research/top-10-web-hacking-techniques-of-2025) — I read the entire list, including the rejected nominees at the bottom, to see what techniques researchers are exploring.
 - **r/websecurityresearch** — I search this subreddit directly for community research, techniques, and discussions.
-  
+
+# Class-Specific Primary / Foundational Reading
+
+- **Request Smuggling:** I read Kettle's original 2019 *HTTP Desync Attacks* research before moving on to the 2025/2026 papers. I treat it as the conceptual foundation.
+- **SSTI:** I read Kettle's original 2015 *Server-Side Template Injection: RCE for the Modern Web App* before moving on to the later research.
+- **Prototype Pollution:** I keep Gareth Heyes' *Server-side prototype pollution: Black-box detection without the DoS* as my reserve research path.
+- **SAML:** I study OWASP's SAML Security Cheat Sheet and the [SAML Raider](https://github.com/CompassSecurity/SAMLRaider) Burp extension documentation.
+- **ORM-Leak:** I read Django's and Prisma's official query/filter documentation first so I understand correct filter behavior before studying how it can be abused.
+
+## Execution Plan
+
+- **This week:** I join one CTF team through CTFtime and publish my Django-lab work as a short public writeup, even if it's rough. I'm building my connections track alongside my technical development.
+- **Next 2 weeks:** I build and test the ORM-Leak lab on my Django environment, starting with the filter-driven endpoint.
+- **Ongoing until January:** I continue VDP hunting for live experience and reputation, while studying advanced vulnerability-chain research alongside it rather than replacing hands-on hunting.
+
 ## Platforms
 - Bugcrowd  (active from January 2027)
 - HackerOne (active from January 2027)
