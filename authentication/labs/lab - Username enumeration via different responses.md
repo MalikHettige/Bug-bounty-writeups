@@ -6,8 +6,6 @@
 **Date Solved:** 2026-09-15  
 **Severity:** Medium
 
----
-
 ## Summary
 
 The login endpoint on this application returns two distinct error messages depending on whether a submitted username exists in the system:
