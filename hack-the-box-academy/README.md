@@ -4,34 +4,24 @@
 ![Focus](https://img.shields.io/badge/Focus-Offensive%20Security-red)
 ![Status](https://img.shields.io/badge/Status-In%20Progress-yellow)
 
-A personal collection of my **Hack The Box (HTB)** machine, challenge, and module writeups as I develop practical offensive security skills.
+Personal collection of **Hack The Box (HTB)** machine, challenge, and module writeups as I develop practical offensive security skills — progressing from fundamentals toward advanced penetration testing.
 
-This repository documents my progression from fundamental concepts and beginner machines toward more advanced penetration-testing techniques.
-
-The goal isn't simply to record solutions.
-
-> **The objective is to understand the attack path, the reasoning behind each step, and why the vulnerability exists.**
+> **The objective is to understand the attack path, the reasoning behind each step, and why the vulnerability exists** — not just to record solutions.
 
 ---
 
-# What I aim for
+## Goals
 
-My goals for this repository are to:
-
-- Build strong offensive security fundamentals
-- Develop a consistent enumeration methodology
-- Understand common network services
-- Improve Linux and Windows security knowledge
-- Become comfortable with common penetration-testing tools
+- Build strong offensive security fundamentals and a consistent enumeration methodology
+- Understand common network services, Linux/Windows internals, and common pentesting tools
 - Learn how vulnerabilities translate into practical attack paths
-- Develop better problem-solving skills
 - Document mistakes instead of hiding them
 - Progress from beginner HTB content toward advanced machines
-- Build a public record of my practical cybersecurity development
+- Build a public record of practical cybersecurity development
 
 ---
 
-# Progress
+## Progress
 
 | Tier | Completed | Status |
 |---|---:|---|
@@ -40,21 +30,13 @@ My goals for this repository are to:
 | Tier 2 | 0 | Not Started |
 | Tier 3 | 0 | Not Started |
 
-### Current Progress
-
-**Machines completed:** 2
-
-**Current focus:** Offensive Security Fundamentals
-
-**Current tier:** Tier 0
+**Current focus:** Offensive Security Fundamentals — Tier 0
 
 ---
 
-# 🧪 Writeups
+## 🧪 Writeups
 
-## Tier 0
-
-### Machines
+### Tier 0
 
 | Machine | Difficulty | Primary Concepts | Writeup |
 |---|---|---|---|
@@ -63,150 +45,47 @@ My goals for this repository are to:
 
 ---
 
-# Topics Covered
+## Topics Covered
 
-As this repository grows, the topics will include:
+**Recon & Enumeration:** Nmap, port scanning, service/version/OS detection, NSE scripts, full-port scanning
 
-### Reconnaissance & Enumeration
+**Networking:** TCP/IP, TCP/UDP, DNS, HTTP/HTTPS, FTP, SSH, Telnet, SMB, RDP, SMTP, SNMP
 
-- Nmap
-- Port scanning
-- Service enumeration
-- Version detection
-- Operating-system detection
-- NSE scripts
-- Full-port scanning
-- Network reconnaissance
+**Linux:** Filesystem, permissions, users/groups, processes, services, SUID/SGID, cron, env vars, PATH manipulation, privilege escalation
 
-### Networking
+**Windows:** Filesystem, users/groups, services, PowerShell, permissions, registry, scheduled tasks, privilege escalation, Active Directory
 
-- TCP/IP
-- TCP ports
-- UDP
-- DNS
-- HTTP/HTTPS
-- FTP
-- SSH
-- Telnet
-- SMB
-- RDP
-- SMTP
-- SNMP
+**Web Security:** HTTP, authN/authZ, IDOR/BOLA, SQLi, XSS, SSRF, file inclusion, command injection, file upload vulns, business logic, API security
 
-### Linux
+**Exploitation:** Public exploits, manual exploitation, PoC development, shells/reverse shells, payloads, exploit modification
 
-- Linux filesystem
-- Permissions
-- Users and groups
-- Processes
-- Services
-- SUID/SGID
-- Cron
-- Environment variables
-- PATH manipulation
-- Linux privilege escalation
-
-### Windows
-
-- Windows filesystem
-- Users and groups
-- Services
-- PowerShell
-- Windows permissions
-- Registry
-- Scheduled tasks
-- Windows privilege escalation
-- Active Directory
-
-### Web Security
-
-- HTTP
-- Authentication
-- Authorization
-- IDOR/BOLA
-- SQL injection
-- XSS
-- SSRF
-- File inclusion
-- Command injection
-- File upload vulnerabilities
-- Business logic
-- API security
-
-### Exploitation
-
-- Public exploits
-- Manual exploitation
-- Proof of concept development
-- Shells
-- Reverse shells
-- Payloads
-- Exploit modification
-
-### Post-Exploitation
-
-- Enumeration after initial access
-- Credential discovery
-- Privilege escalation
-- Persistence concepts
-- Lateral movement
-- Data discovery
+**Post-Exploitation:** Enumeration after access, credential discovery, privilege escalation, persistence, lateral movement, data discovery
 
 ---
 
-# Tools I expect to use throughout the journey:
+## Tools
 
-- Nmap
-- Burp Suite
-- Netcat
-- Gobuster
-- ffuf
-- Feroxbuster
-- Nikto
-- WhatWeb
-- SQLmap
-- Metasploit
-- Impacket
-- Responder
-- BloodHound
-- CrackMapExec / NetExec
-- Wireshark
-- John the Ripper
-- Hashcat
-- Linux command-line utilities
-- PowerShell
-  
+Nmap, Burp Suite, Netcat, Gobuster, ffuf, Feroxbuster, Nikto, WhatWeb, SQLmap, Metasploit, Impacket, Responder, BloodHound, CrackMapExec/NetExec, Wireshark, John the Ripper, Hashcat, Linux CLI utilities, PowerShell
+
 ---
 
-# One of the main skills I am developing is a repeatable enumeration process.
+## Enumeration Methodology
 
-A simplified methodology (what I do) :
+One of the main skills I'm developing is a repeatable enumeration process:
 
 ```text
 1. Identify target
-        ↓
 2. Confirm scope
-        ↓
 3. Discover open ports
-        ↓
 4. Identify services
-        ↓
 5. Identify versions
-        ↓
 6. Enumerate interesting services
-        ↓
 7. Identify attack surface
-        ↓
 8. Form hypotheses
-        ↓
 9. Test hypotheses
-        ↓
 10. Gain initial access
-        ↓
 11. Enumerate from inside
-        ↓
 12. Privilege escalation
-        ↓
 13. Capture flags
-        ↓
 14. Document the attack path
+```
