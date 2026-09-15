@@ -44,7 +44,7 @@ new_cookie = r.cookies.get("session")
 Inject `new_cookie` into browser → navigate to `/my-account?id=carlos` → lab solved ✅
 
 ## Proof of Concept
-The python script : https://github.com/MalikHettige/Scripts-tools/blob/main/authentication/Broken%20brute-force%20protection%2C%20multiple%20credentials%20per%20request/victim-password-exposed-code.py
+https://github.com/MalikHettige/Scripts-tools/blob/main/authentication/Broken%20brute-force%20protection%2C%20multiple%20credentials%20per%20request/victim-password-exposed-code.py
 
 **Attack output:**
 ```
