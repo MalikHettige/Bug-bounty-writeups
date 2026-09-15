@@ -31,28 +31,28 @@ Send the login request to Intruder, set username as the payload position. After 
 
 ### Phase 2 — Password Brute-Force
 
-1. Update `password-brute.py` with confirmed username `ag`
-2. Run script — iterates password wordlist concurrently with `allow_redirects=False`
-3. Successful login returns HTTP **302**
-4. Valid password identified: **`jessica`**
+7. Update `password-brute.py` with confirmed username `ag`
+8. Run script — iterates password wordlist concurrently with `allow_redirects=False`
+9. Successful login returns HTTP **302**
+10. Valid password identified: **`jessica`**
 
 ### Phase 3 — Access
 
-1. Navigate to `/login`
-2. Enter credentials: `ag` / `jessica`
-3. Successfully authenticated as `ag` — lab solved ✅
+11. Navigate to `/login`
+12. Enter credentials: `ag` / `jessica`
+13. Successfully authenticated as `ag` — lab solved ✅
 
 
 ## Proof of Concept
 
 **Phase 1 — Username found:**
-https://github.com/MalikHettige/Scripts-tools/blob/main/authentication/Lab%20-%202FA%20broken%20logic/username-enum-subtly-different-responses/username-enum-subtly-different-responses.py
+https://github.com/MalikHettige/Scripts-tools/blob/main/authentication/username-enum-subtly-different-responses/username-enum-subtly-different-responses.py
 ```
 [FOUND] ag
 ```
 
 **Phase 2 — Password found:**
-https://github.com/MalikHettige/Scripts-tools/blob/main/authentication/Lab%20-%202FA%20broken%20logic/username-enum-subtly-different-responses/password-brute.py
+https://github.com/MalikHettige/Scripts-tools/blob/main/authentication/username-enum-subtly-different-responses/password-brute.py
 ```
 [LOGIN SUCCESS] jessica
 ```
