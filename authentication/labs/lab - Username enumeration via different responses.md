@@ -54,6 +54,10 @@ This behavioural difference allows an attacker to enumerate valid usernames with
 
 ## Proof of Concept
 
+<img width="1186" height="280" alt="image" src="https://github.com/user-attachments/assets/8bb06ce0-0bbe-49d7-8ab4-b44de702b379" />
+
+<img width="1916" height="883" alt="image" src="https://github.com/user-attachments/assets/aff1e555-bcb6-4c7c-94da-66cf231064ce" />
+
 **Phase 1 output — username found:**
 ```
 [FOUND - diff message] an
