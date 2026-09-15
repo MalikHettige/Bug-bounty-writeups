@@ -10,6 +10,10 @@
 
 The login endpoint returns what appears to be an identical error message for both valid and invalid usernames — `"Invalid username or password."` — making this vulnerability invisible to the naked eye and nearly undetectable in Burp's UI. The subtle difference is a **single trailing space** appended to the message when a valid username is submitted. By anchoring detection on the exact absence of the known fixed string rather than comparing full response bodies, a valid username was enumerated and the account password subsequently brute-forced via HTTP 302 redirect detection.
 
+### Burp Alternative
+Solving this in Burp Suite:
+Send the login request to Intruder, set username as the payload position. After running the attack, add a column — right-click any response → "Show response in browser" won't help here. Instead go to Options → Grep - Match, add the exact string Invalid username or password. and check "Flag result if expression is not found". The one request where the box is unchecked is your valid username. Burp Pro users can also sort by response length after enabling "Store requests/responses" — the valid username will be 1 byte off. Community users will wait 2–3 minutes for the same result Python finds in 10 seconds.
+
 ## Affected Component
 
 `POST /login` — unauthenticated login form. No CSRF token present. Fields: `username`, `password`.
@@ -42,11 +46,13 @@ The login endpoint returns what appears to be an identical error message for bot
 ## Proof of Concept
 
 **Phase 1 — Username found:**
+https://github.com/MalikHettige/Scripts-tools/blob/main/authentication/Lab%20-%202FA%20broken%20logic/username-enum-subtly-different-responses/username-enum-subtly-different-responses.py
 ```
 [FOUND] ag
 ```
 
 **Phase 2 — Password found:**
+https://github.com/MalikHettige/Scripts-tools/blob/main/authentication/Lab%20-%202FA%20broken%20logic/username-enum-subtly-different-responses/password-brute.py
 ```
 [LOGIN SUCCESS] jessica
 ```
