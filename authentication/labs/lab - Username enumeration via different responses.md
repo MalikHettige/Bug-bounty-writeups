@@ -67,8 +67,8 @@ This behavioural difference allows an attacker to enumerate valid usernames with
 ```
 
 **Scripts used:**
-- [`username-enum-different-responses.py`](https://github.com/MalikHettige/Scripts-tools/blob/main/authentication/Lab%20-%202FA%20broken%20logic/Username%20Enumeration%20via%20Different%20Responses/username-enum-different-responses.py) — Phase 1
-- [`password-brute.py`](https://github.com/MalikHettige/Scripts-tools/blob/main/authentication/Lab%20-%202FA%20broken%20logic/Username%20Enumeration%20via%20Different%20Responses/password-brute.py) — Phase 2
+- [`username-enum-different-responses.py`](https://github.com/MalikHettige/Scripts-tools/blob/main/authentication/Username%20Enumeration%20via%20Different%20Responses/username-enum-different-responses.py) — Phase 1
+- [`password-brute.py`](https://github.com/MalikHettige/Scripts-tools/blob/main/authentication/Username%20Enumeration%20via%20Different%20Responses/password-brute.py) — Phase 2
 
 ---
 
