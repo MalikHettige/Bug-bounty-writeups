@@ -38,17 +38,17 @@ This behavioural difference allows an attacker to enumerate valid usernames with
 
 ### Phase 2 — Password Brute-Force
 
-1. Save the PortSwigger-provided candidate password wordlist to `passwords.txt`
-2. Update `password-brute.py` with the confirmed username `an`
-3. Run the script — it POSTs each password concurrently with `allow_redirects=False`
-4. A successful login returns HTTP **302** instead of 200
-5. Valid password identified: **`harley`**
+7. Save the PortSwigger-provided candidate password wordlist to `passwords.txt`
+8. Update `password-brute.py` with the confirmed username `an`
+9. Run the script — it POSTs each password concurrently with `allow_redirects=False`
+10. A successful login returns HTTP **302** instead of 200
+11. Valid password identified: **`harley`**
 
 ### Phase 3 — Access
 
-1. Navigate to `/login`
-2. Enter credentials: `an` / `harley`
-3. Successfully authenticated — lab solved ✅
+12. Navigate to `/login`
+13. Enter credentials: `an` / `harley`
+14. Successfully authenticated — lab solved ✅
 
 ---
 
@@ -67,8 +67,6 @@ This behavioural difference allows an attacker to enumerate valid usernames with
 ```
 [302 - LOGIN SUCCESS] password: harley
 ```
-
-> 📸 _Screenshot of solved lab banner — to be added on next run_
 
 **Scripts used:**
 - [`username-enum-different-responses.py`](https://github.com/MalikHettige/Scripts-tools/blob/main/authentication/Lab%20-%202FA%20broken%20logic/Username%20Enumeration%20via%20Different%20Responses/username-enum-different-responses.py) — Phase 1
