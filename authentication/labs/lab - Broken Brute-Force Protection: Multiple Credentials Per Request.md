@@ -6,19 +6,14 @@
 **Date Solved:** 2026-09-15  
 **Severity:** High
 
----
-
 ## Summary
 
 The login endpoint accepts JSON and processes an array of passwords in a single request. The application's brute-force protection counts requests — not attempts — meaning sending 100 passwords in one JSON array registers as a single login attempt. Protection completely bypassed. Full account takeover on `carlos` achieved with one HTTP request.
 
----
 
 ## Affected Component
 
 `POST /login` — accepts `application/json`. No CSRF token. Fields: `username` (string), `password` (string — but also accepts array).
-
----
 
 ## Steps to Reproduce
 
@@ -48,8 +43,6 @@ new_cookie = r.cookies.get("session")
 ```
 Inject `new_cookie` into browser → navigate to `/my-account?id=carlos` → lab solved ✅
 
----
-
 ## Proof of Concept
 
 **Attack output:**
@@ -62,8 +55,6 @@ New cookie: CJicCnAteg2LJwphMVAkjT5wRv3gbxh7
 <img width="1257" height="556" alt="image" src="https://github.com/user-attachments/assets/8ac9062b-4e02-4f09-a771-d58bc4dcb3fe" />
 <img width="1912" height="941" alt="image" src="https://github.com/user-attachments/assets/22c6db94-201a-4fe1-bda8-46e74548810e" />
 
----
-
 ## Root Cause
 
 The brute-force protection was implemented at the **request level** rather than the **attempt level**. The developer assumed one request = one password attempt. The login handler iterates over the password field if it receives an array — but the rate-limit counter never sees more than one increment regardless of array size.
@@ -73,8 +64,6 @@ Protection logic:  requestCount++ per POST → lock after N
 Actual attempts:   server loops passwords[] → N attempts per POST
 Gap:               protection and handler are decoupled
 ```
-
----
 
 ## Impact
 
@@ -95,8 +84,6 @@ Rated **High** (vs Medium for enumeration labs) because:
 - Protection is not just weak — it is completely non-functional
 - Nearly undetectable in server logs
 
----
-
 ## Why Standard Approaches Failed First
 
 | Approach | Problem |
@@ -106,8 +93,6 @@ Rated **High** (vs Medium for enumeration labs) because:
 | Cookie without browser headers | Blocked by server-side checks |
 
 **Fix:** Added `User-Agent`, `Referer`, and `Origin` headers to mimic a real browser — server accepted the payload.
-
----
 
 ## Remediation
 
