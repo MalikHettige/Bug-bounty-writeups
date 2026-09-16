@@ -100,8 +100,7 @@ https://github.com/MalikHettige/Scripts-tools/blob/main/authentication/username-
 <img width="742" height="437" alt="image" src="https://github.com/user-attachments/assets/a53f5892-bd46-4c6b-b569-4100de0d5dcf" />
 
 **Lab solved:**  
-![Lab Solved](<img width="1919" height="824" alt="image" src="https://github.com/user-attachments/assets/33c45981-04d6-4d3f-b152-5ff420a08992" />)
-
+<img width="1919" height="824" alt="image" src="https://github.com/user-attachments/assets/ad705a62-1ff0-4625-b7d1-1aefb6772db6" />
 ---
 
 ## Rate Limit Bypass
