@@ -6,19 +6,13 @@
 **Date Solved:** 2026-09-16  
 **Severity:** High (when chained to brute-force)
 
----
-
 ## Summary
 
 The login endpoint leaks valid usernames through response timing differences. When a valid username is submitted, the server runs bcrypt password comparison — an intentionally slow operation. Invalid usernames skip bcrypt entirely and return immediately. This ~300–400ms gap is detectable and exploitable even when error messages and response sizes are identical. Combined with `X-Forwarded-For` IP spoofing to bypass rate limiting, a full username enumeration and password brute-force was completed achieving account takeover on `alterwind`.
 
----
-
 ## Affected Component
 
 `POST /login` — unauthenticated login form. Rate limiting present (bypassable via `X-Forwarded-For`). Fields: `username`, `password`.
-
----
 
 ## Why This Works (Root Cause)
 
@@ -28,8 +22,6 @@ Valid username   → server checks DB → found → runs bcrypt on password → 
 ```
 
 bcrypt is designed to be slow to prevent brute-force. But that slowness leaks username validity — the server only runs bcrypt when the username exists. A longer password amplifies the gap because bcrypt has to process more data.
-
----
 
 ## Steps to Reproduce
 
@@ -70,7 +62,7 @@ Iterate password wordlist against `alterwind` with rotating `X-Forwarded-For`:
 
 ### Phase 3 — Access
 
-Login with `alterwind:qwertyuiop` → authenticated → lab solved ✅
+Login with `alterwind:qwertyuiop` → authenticated → lab solved 
 
 ---
 
@@ -84,6 +76,7 @@ wiener      → 1.678s
 ```
 
 **Username enumeration output:** 
+
 https://github.com/MalikHettige/Scripts-tools/blob/main/authentication/username-enum-response-timing/username-enum-timing.py
 ```
 Top 5 slowest:
@@ -95,11 +88,13 @@ Top 5 slowest:
 ```
 
 **Password found:**
+
 https://github.com/MalikHettige/Scripts-tools/blob/main/authentication/username-enum-response-timing/password-brute.py
 
 <img width="742" height="437" alt="image" src="https://github.com/user-attachments/assets/a53f5892-bd46-4c6b-b569-4100de0d5dcf" />
 
 **Lab solved:**  
+
 <img width="1919" height="824" alt="image" src="https://github.com/user-attachments/assets/ad705a62-1ff0-4625-b7d1-1aefb6772db6" />
 ---
 
