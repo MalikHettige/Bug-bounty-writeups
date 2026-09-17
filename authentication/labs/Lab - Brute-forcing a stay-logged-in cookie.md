@@ -59,7 +59,7 @@ Full script: https://github.com/MalikHettige/Scripts-tools/blob/main/authenticat
 
 <img width="767" height="190" alt="image" src="https://github.com/user-attachments/assets/71d31b48-fa5e-4119-a352-0154c1ebf36e" />
 
-[Lab Solved](<img width="1920" height="1080" alt="image" src="https://github.com/user-attachments/assets/272db856-f68c-4245-ae7b-a59ccc8ee6d2" />)
+<img width="1920" height="1080" alt="image" src="https://github.com/user-attachments/assets/272db856-f68c-4245-ae7b-a59ccc8ee6d2" />
 
 ## Impact
 
