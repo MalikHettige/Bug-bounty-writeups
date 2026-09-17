@@ -80,6 +80,7 @@ for password in passwords:
 ## Proof of Concept
 
 Python scirpt to decode: https://github.com/MalikHettige/Scripts-tools/blob/main/authentication/Brute-Forcing%20a%20Stay-Logged-In%20Cookie/stay-logged-in-decode.py
+
 Python script to brute: https://github.com/MalikHettige/Scripts-tools/blob/main/authentication/Brute-Forcing%20a%20Stay-Logged-In%20Cookie/stay-logged-in-brute.py
 
 ```
@@ -90,8 +91,7 @@ Formula:             base64(username:md5(password))
 [FOUND] password: monitor
 Forged cookie: Y2FybG9zOjA4YjU0MTFmODQ4YTI1ODFhNDE2NzJhNzU5Yzg3Mzgw
 ```
-https://github.com/MalikHettige/Bug-bounty-writeups/blob/main/authentication/labs/Assets/brute-password.png?raw=true
----
+<img width="887" height="762" alt="image" src="https://github.com/user-attachments/assets/58242243-b899-40a4-b5c7-fd11a8ba9d8b" />
 
 ## What is a Hash? (Reference)
 
