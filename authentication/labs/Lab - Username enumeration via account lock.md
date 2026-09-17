@@ -84,19 +84,20 @@ The account lockout logic is only applied to existing user accounts. The applica
 
 **Official / Standards**
 
-- CWE-204: Observable Response Discrepancy
-- CWE-203: Observable Discrepancy
-- OWASP Testing Guide - Testing for Account Enumeration (WSTG-IDNT-04)
-- OWASP Top 10 2021 - A07 Identification and Authentication Failures
+- CWE-204: Observable Response Discrepancy - https://cwe.mitre.org/data/definitions/204.html
+- CWE-203: Observable Discrepancy - https://cwe.mitre.org/data/definitions/203.html
+- OWASP Testing Guide - Testing for Account Enumeration (WSTG-IDNT-04) - https://owasp.org/www-project-web-security-testing-guide/latest/4-Web_Application_Security_Testing/03-Identity_Management_Testing/04-Testing_for_Account_Enumeration_and_Guessable_User_Account
+- OWASP Top 10 2021 - A07 Identification and Authentication Failures - https://owasp.org/Top10/A07_2021-Identification_and_Authentication_Failures/
 
 **PortSwigger**
 
-- Lab: Username enumeration via account lock
-- PortSwigger Web Security Academy - Authentication
+- Lab: Username enumeration via account lock - https://portswigger.net/web-security/authentication/password-based/lab-username-enumeration-via-account-lock
+- PortSwigger Web Security Academy - Authentication - https://portswigger.net/web-security/authentication
 
 **Additional Good Sources**
 
-- ZAP Alert - Possible Username Enumeration
-- OWASP Cornucopia - Authentication AT4
+- ZAP Alert - Possible Username Enumeration - https://www.zaproxy.org/docs/alerts/40023/
+- OWASP Cornucopia - Authentication AT4 - https://cornucopia.owasp.org/card/webapp/AT4
+- [Visit my repo which contains all scripts I used pertaining to Auth labs](https://github.com/MalikHettige/Scripts-tools/tree/main/authentication)
 
 **Tags:** #PortSwigger #IDOR #AccessControl
