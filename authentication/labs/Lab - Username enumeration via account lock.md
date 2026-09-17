@@ -30,11 +30,12 @@ https://[LAB-ID].web-security-academy.net/login
 3. Logged in with the discovered credentials (`arlington:qwerty`) and accessed the account page to solve the lab.
 
 ## Proof of Concept
-
-## Root Cause
 <img width="774" height="469" alt="image" src="https://github.com/user-attachments/assets/0a56388b-cf95-4430-899e-2625ec27125b" />
 
 <img width="1919" height="798" alt="image" src="https://github.com/user-attachments/assets/6a133355-9f58-47b4-a9d4-c2ed178038ec" />
+
+## Root Cause
+The account lockout logic is only applied to existing user accounts. The application tracks failed login attempts solely for usernames that exist in the database. Non-existent usernames are not tracked, so they never reach the lockout threshold and always return the same generic error. This creates an observable response discrepancy (CWE-204) that leaks information about valid accounts.
 
 ## Remediation
 
