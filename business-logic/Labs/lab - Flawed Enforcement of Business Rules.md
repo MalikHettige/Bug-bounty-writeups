@@ -44,18 +44,6 @@ Always check:
 
 ## Proof of Concept
 
-```
-NEWCUST5   -$5.00
-SIGNUP30   -$401.10
-NEWCUST5   -$5.00
-SIGNUP30   -$401.10
-NEWCUST5   -$5.00
-SIGNUP30   -$401.10
-NEWCUST5   -$5.00
-SIGNUP30   -$401.10
-Total:     $0.00
-```
-
 <img width="1594" height="853" alt="image" src="https://github.com/user-attachments/assets/962c6c7d-eec4-4fc0-938c-b0089b8371c0" />
 
 ## Root Cause
