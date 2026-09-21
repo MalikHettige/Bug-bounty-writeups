@@ -1,9 +1,13 @@
 # Inconsistent Handling of Exceptional Input
 
 **Platform:** PortSwigger Web Security Academy
+
 **Category:** Business Logic
+
 **Difficulty:** Practitioner
+
 **Date Solved:** 2026-09-21
+
 **Severity:** High
 
 
