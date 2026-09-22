@@ -128,10 +128,10 @@ A particularly useful test is to capture a legitimate later-stage request and re
 
 ## References
 
-- **PortSwigger — Insufficient workflow validation** — https://portswigger.net/web-security/logic-flaws/examples/lab-logic-flaws-insufficient-workflow-validation
-- **OWASP WSTG — Circumvention of Workflows** — https://owasp.org/www-project-web-security-testing-guide/latest/4-Web_Application_Security_Testing/10-Business_Logic_Testing/06-Testing_for_the_Circumvention_of_Workflows
-- **OWASP — Business Logic Security Cheat Sheet** — https://cheatsheetseries.owasp.org/cheatsheets/Business_Logic_Security_Cheat_Sheet.html
-- **OWASP — REST Security Cheat Sheet** — https://cheatsheetseries.owasp.org/cheatsheets/REST_Security_Cheat_Sheet.html
-- **MITRE CWE-841 — Improper Enforcement of Behavioral Workflow** — https://cwe.mitre.org/data/definitions/841.html
+- [PortSwigger — Insufficient workflow validation](https://portswigger.net/web-security/logic-flaws/examples/lab-logic-flaws-insufficient-workflow-validation)
+- [OWASP WSTG — Circumvention of Workflows](https://owasp.org/www-project-web-security-testing-guide/latest/4-Web_Application_Security_Testing/10-Business_Logic_Testing/06-Testing_for_the_Circumvention_of_Workflows)
+- [OWASP — Business Logic Security Cheat Sheet](https://cheatsheetseries.owasp.org/cheatsheets/Business_Logic_Security_Cheat_Sheet.html)
+- [OWASP — REST Security Cheat Sheet](https://cheatsheetseries.owasp.org/cheatsheets/REST_Security_Cheat_Sheet.html)
+- [MITRE CWE-841 — Improper Enforcement of Behavioral Workflow](https://cwe.mitre.org/data/definitions/841.html)
 
 **Tags:** #PortSwigger #IDOR #AccessControl
