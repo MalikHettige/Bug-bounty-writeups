@@ -1,9 +1,13 @@
 # JWT Authentication Bypass via Unverified Signature
 
 **Platform:** PortSwigger Web Security Academy
+
 **Category:** JWT / Authentication
+
 **Difficulty:** Apprentice
+
 **Date Solved:** 2026-09-23
+
 **Severity:** Critical
 
 ## Summary
