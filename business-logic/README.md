@@ -26,13 +26,3 @@ being used in an order or a way the developer didn't picture.
    requests before the first one's effect commits
 4. Look for the chain before writing off a finding as "just" access control
    or "just" a race condition — the real severity is usually in the combination
-
-## Labs
-- PortSwigger — Business Logic Vulnerabilities module
-- 
-
-## Disclosed reports studied
-- 
-
-## Notes / gotchas
-- 
