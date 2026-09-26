@@ -1,7 +1,7 @@
 # Bug Bounty Writeups — Malik Hettige, 17
 Writeups from my bug bounty hunting practice and live findings. Focus: IDOR, broken access control, authentication, business logic as foundation for now.
 
-**[View My Live Bug Bounty Hunting Reports (Bug-bounty-reports)](https://github.com/MalikHettige/Bug-bounty-reports)**
+**View My Live Bug Bounty Hunting Reports [(Bug-bounty-reports)](https://github.com/MalikHettige/Bug-bounty-reports)**
 
 *Check out my raw tracking sheets, root-cause dissections of accepted reports, and key operational takeaways from triaged rejections.*
 ## What's in here
