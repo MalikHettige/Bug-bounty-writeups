@@ -3,7 +3,7 @@ Writeups from my bug bounty hunting practice and live findings. Focus: IDOR, bro
 
 **View My Live Bug Bounty Hunting Reports [(Bug-bounty-reports)](https://github.com/MalikHettige/Bug-bounty-reports)**
 
-*Check out my raw tracking sheets, root-cause dissections of accepted reports, and key operational takeaways from triaged rejections.*
+---
 ## What's in here
 - Mainly [portswigger-labs](https://github.com/MalikHettige/Bug-bounty-writeups/tree/main/portswigger-labs) — PortSwigger Web Security Academy writeups, organized by vulnerability category.
 - [Hack The Box Academy](https://github.com/MalikHettige/Bug-bounty-writeups/tree/main/hack-the-box-academy) — Academy module notes and hands-on labs.
