@@ -1,7 +1,11 @@
 **Platform:** PortSwigger Web Security Academy
+
 **Category:** JWT / Authentication
+
 **Difficulty:** Practitioner
+
 **Date Solved:** 2026-10-07
+
 **Severity:** Critical
 
 ## Summary
