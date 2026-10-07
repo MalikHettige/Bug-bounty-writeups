@@ -50,6 +50,9 @@ The server fetches the JWKS from the attacker URL, finds the public key matching
 HTTP/1.1 200 OK
 Content-Type: application/json
 ```
+**Exploit server would look like this:**
+
+<img width="1920" height="1080" alt="image" src="https://github.com/user-attachments/assets/65b0509c-316c-4df0-8c40-6a3be8a92e2e" />
 
 **Value of header in JWT web token**
 ```jsx
