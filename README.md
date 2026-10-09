@@ -3,6 +3,11 @@ Writeups from my bug bounty hunting practice and live findings. Focus: IDOR, bro
 
 **View My Live Bug Bounty Hunting Reports [(Bug-bounty-reports)](https://github.com/MalikHettige/Bug-bounty-reports)**
 
+**Highlights:**
+- [JWT authentication bypass via JKU header injection](https://github.com/MalikHettige/Bug-bounty-writeups/blob/main/JWT/labs/Lab%20-%20JWT%20authentication%20bypass%20via%20jku%20header%20injection.md)
+- [Username enumeration via account lock](https://github.com/MalikHettige/Bug-bounty-writeups/blob/main/authentication/labs/Lab%20-%20Username%20enumeration%20via%20account%20lock.md)
+- [Insufficient workflow validation](https://github.com/MalikHettige/Bug-bounty-writeups/blob/main/business-logic/Labs/lab%20-%20Insufficient%20Workflow%20Validation.md)
+
 ---
 ## What's in here
 - Mainly [portswigger-labs](https://github.com/MalikHettige/Bug-bounty-writeups/tree/main/portswigger-labs) — PortSwigger Web Security Academy writeups, organized by vulnerability category.
