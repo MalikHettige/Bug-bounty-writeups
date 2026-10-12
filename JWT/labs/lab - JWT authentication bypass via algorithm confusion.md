@@ -1,9 +1,13 @@
 # JWT authentication bypass via algorithm confusion
 
 **Platform:** PortSwigger Web Security Academy
+
 **Category:** Authentication / JWT
+
 **Difficulty:** Practitioner
+
 **Date Solved:** 2026-10-12
+
 **Severity:** Critical
 
 ## Summary
