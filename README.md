@@ -15,7 +15,7 @@ Writeups from my bug bounty hunting practice and live findings. Focus: IDOR, bro
 - `tryhackme/` — Web Fundamentals and web security learning notes.
 - `pentesterlab/` — PentesterLab exercise writeups and notes.
 - `overthewire/` — Linux and command-line challenge writeups.
-- `burp-suite-certified-practitioner/` — Exam preparation notes, labs, and methodology.
+- [burp-suite-certified-practitioner](https://github.com/MalikHettige/Bug-bounty-writeups/tree/main/bug-hunter-skill-progression) — Exam preparation notes, labs, and methodology.
 - `bug-hunter-skill-progression/` — Personal roadmap, checklists, and progress tracking.
 - `random-lessons/` — Security concepts, research notes, and miscellaneous documentation.
 - `writeup-template.md` — Standard template used for documenting writeups.
