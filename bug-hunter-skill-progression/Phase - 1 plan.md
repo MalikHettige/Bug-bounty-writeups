@@ -1,5 +1,6 @@
 # Timeline (these must be done by mid-oct)
 
+**Page created: september 10th 2026**
 ### Learning paths to do on portswigger (update methodology in every single lab)
 
 - [x]  BAC
@@ -41,7 +42,8 @@
 - [ ]  Race Conditions (single-packet/multi-threaded TOCTOU on a check-then-act endpoint): cold in under 45 min — this one's allowed to be slower, tooling setup eats time\
 - [ ]  Authentication (response-manipulation MFA bypass): cold in under 20 min
 - [ ]  OAuth (redirect_uri/Referer token leakage): cold in under 30 min
-- [ ]  One combined lab with 2-3 of the above seeded together, unlabeled — you don't know which bug types are present going in, and you find and exploit all of them in one session
+- [ ]  One combined lab with 2-3 of the above seeded together, unlabeled — When I don't know which bug types are present going in,
+- [ ]  I find and exploit all of them in one session
 
 ---
 
@@ -64,12 +66,12 @@
 **IDOR + OAuth**
 
 - [ ]  **IDOR in OAuth token exchange/linking endpoints** — swap a `user_id`/`account_id` parameter during the OAuth callback or account-linking flow to bind an attacker's OAuth identity to a victim's account, or vice versa.
-- [ ]  **State parameter + IDOR combo** — predictable or reusable OAuth `state` lets you replay another user's authorization code; pair with IDOR on the callback's user-binding step for full ATO.
+- [ ]  **State parameter + IDOR combo** — predictable or reusable OAuth `state` lets me replay another user's authorization code; pair with IDOR on the callback's user-binding step for full ATO.
 - [ ]  **IDOR on OAuth app/consent management** — revoke, modify, or view another user's connected third-party apps and their scopes.
 
 **IDOR + JWT**
 
-- [ ]  **JWT with weak/no signature verification (alg:none, key confusion) + IDOR** — forge a JWT for arbitrary `user_id`, then hit an endpoint that trusts the ID from the token but the endpoint also has a secondary IDOR check you can bypass. Doubly critical because it's both an auth bypass and a BOLA.
+- [ ]  **JWT with weak/no signature verification (alg:none, key confusion) + IDOR** — forge a JWT for arbitrary `user_id`, then hit an endpoint that trusts the ID from the token but the endpoint also has a secondary IDOR check that I can bypass. Doubly critical because it's both an auth bypass and a BOLA.
 - [ ]  **IDOR via JWT `kid` header injection (SQLi/path traversal in `kid`) leading to signature forgery** — forge tokens for any user ID, and every IDOR-protected endpoint falls at once.
 - [ ]  **Refresh token IDOR** — swap a refresh token's associated user/device ID to mint access tokens for other accounts.
 
@@ -77,7 +79,7 @@
 
 - [ ]  **BOLA through nested/nested-object nested references** — endpoint checks ownership of the top-level object but not the nested sub-object ID (e.g., `/orders/{id}/items/{item_id}` checks order ownership, not item).
 - [ ]  **API versioning IDOR** — v1 endpoint deprecated but still live and unprotected while v2 has the fix; classic and still very common in bounty programs.
-- [ ]  **Mass assignment + IDOR** — send an extra `user_id` or `owner_id` field in a request body that the API doesn't strip, reassigning ownership of an object to yourself or changing another user's object.
+- [ ]  **Mass assignment + IDOR** — send an extra `user_id` or `owner_id` field in a request body that the API doesn't strip, reassigning ownership of an object to myself or changing another user's object.
 - [ ]  **HTTP method/verb tampering + IDOR** — GET is protected, but PUT/PATCH/DELETE on the same object ID isn't checked the same way.
 
 **IDOR + Race Conditions**
@@ -104,7 +106,7 @@
 #### PortSwigger **JWT**
 
 - [ ]  **The Critical Outcome:** **Cryptographic Signature Spoofing via JWKS / Key Confusion**
-- [ ]  Algorithm confusion: server expects RS256, you resign the token as HS256 using the server's own public key as the HMAC secret. Full signature bypass — forge any user, including admin, without ever needing a real secret.
+- [ ]  Algorithm confusion: server expects RS256, I resign the token as HS256 using the server's own public key as the HMAC secret. Full signature bypass — forge any user, including admin, without ever needing a real secret.
 
 #### Relevant **race-condition** labs
 
@@ -126,9 +128,9 @@
 
 - [ ]  CORS misconfig: can identify and confirm (Origin reflection + credentials:true) in under 5 min on any target
 - [ ]  Use practice programs and do recon + read everything
-- [ ]  Source map `/.git`exposure: automated check running (script or one-liner) you can point at any URL
+- [ ]  Source map `/.git`exposure: automated check running (script or one-liner) I can point at any URL
 - [ ]  JS bundle analysis: can pull, deobfuscate, and extract endpoints/feature-flags from a minified bundle in under 15 min
-- [ ]  Automation tools installed and run at least once each: nuclei, subfinder, httpx, gau, LinkFinder — not just installed, actually run against a real (non-scope, practice) domain with output you understood
+- [ ]  Automation tools installed and run at least once each: nuclei, subfinder, httpx, gau, LinkFinder — not just installed, actually run against a real (non-scope, practice) domain with output I understood
 
 ### **Pattern Recognition Habit**
 
@@ -146,12 +148,12 @@
 ### Skill stack
 
 - [ ]  **Source map exploitation** — Production JS builds sometimes ship `.map` files by accident, which unminify the entire original source: internal comments, unused admin routes, hardcoded API structure, sometimes literal secrets. A five-minute check (`curl` the JS bundle URL + `.map`) that most hunters skip because it feels too easy to be real.
-- [ ]  **Exposed `.git` directory / git history mining** — Misconfigured deployments occasionally leave `.git/` publicly accessible, letting you pull the entire commit history — including secrets committed and later "deleted" (which git history still contains). Pair with GitHub dorking on the target's own public repos for the same pattern in commits that predate a cleanup.
-- [ ]  **Mobile APK/IPA static decompilation** — This is the natural partner to your mobile recon plan, one layer deeper: `jadx`/`apktool` on the APK (or `class-dump` on iOS) pulls hardcoded API keys, undocumented endpoints, and feature flags that never appear in live traffic because the UI never triggers them. Traffic proxying shows you what the app *does*; decompilation shows you what it *can* do.
+- [ ]  **Exposed `.git` directory / git history mining** — Misconfigured deployments occasionally leave `.git/` publicly accessible, letting me pull the entire commit history — including secrets committed and later "deleted" (which git history still contains). Pair with GitHub dorking on the target's own public repos for the same pattern in commits that predate a cleanup.
+- [ ]  **Mobile APK/IPA static decompilation** — This is the natural partner to my mobile recon plan, one layer deeper: `jadx`/`apktool` on the APK (or `class-dump` on iOS) pulls hardcoded API keys, undocumented endpoints, and feature flags that never appear in live traffic because the UI never triggers them. Traffic proxying shows me what the app *does*; decompilation shows me what it *can* do.
 - [ ]  **Parameter mining** — Tools like Arjun or param-miner brute-force undocumented request parameters on known endpoints. A huge fraction of debug modes, admin overrides, and hidden business-logic branches are gated behind a parameter that's never in any docs and never sent by the normal UI.
 - [ ]  **CORS misconfiguration hunting** — Specifically: does the target reflect an arbitrary `Origin` header back in `Access-Control-Allow-Origin` while also setting `Access-Control-Allow-Credentials: true`? That combination means any attacker-controlled page can read authenticated responses cross-origin. Mechanical, fast to check, still shockingly common.
 - [ ]  **Feature-flag / dead-route discovery via JS bundle analysis** — Search minified JS for flag-like strings (`enableAdminPanel`, `betaFeature_export`) and route definitions that never render in the current UI. The frontend code is flagged off; the backend route it calls often isn't.
-- [ ]  **Webhook signature bypass** — For any endpoint receiving webhooks (Stripe, GitHub, internal service-to-service callbacks), check whether the HMAC/signature verification is actually enforced, or just logged/optional. A common, distinct oversight from any auth bug you're already testing for.
+- [ ]  **Webhook signature bypass** — For any endpoint receiving webhooks (Stripe, GitHub, internal service-to-service callbacks), check whether the HMAC/signature verification is actually enforced, or just logged/optional. A common, distinct oversight from any auth bug I'm already testing for.
 - [ ]  API enumeration
 - [ ]  Package Hijacking
 - [ ]  JWKS spoofing
@@ -166,6 +168,7 @@
 - [ ]  Combined/unlabeled lab passed
 - [ ]  Recon stack tools all run at least once successfully
 
-So: hunt your seven chains as trained, report everything valid at whatever severity it lands — let criticals be upside when they land, not the dependency. That's not a downgrade of ambition, it's the version of the plan that actually respects "strictly June" as a constraint.
+So: hunt my seven chains as trained, report everything valid at whatever severity it lands — let criticals be upside when they land, not the dependency. That's not a downgrade of ambition, it's the version of the plan that actually respects "strictly June" as a constraint.
 
-Shortlist-luck question is correctly parked — that's a Phase 2 problem, not a Phase 1 one. Go finish today's lab.
+Shortlist-luck question is correctly parked — that's a Phase 2 problem, not a Phase 1 one.
+Each and every single aspect is built to lead me to 10K by mid 2027.
