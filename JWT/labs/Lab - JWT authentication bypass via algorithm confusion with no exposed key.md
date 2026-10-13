@@ -45,7 +45,7 @@ Session management / JWT verification logic — specifically the token validatio
 Each `Found n with multiplier N` block includes a usable base64 X.509 key, a base64 PKCS1 key, and a ready-to-send tampered JWT — the candidates are tried against `/admin` in sequence until one returns `200 OK`, confirming the correct recovered key.
 
 **Docker environment used to run the `sig2n` container:**
-![Uploading image.png…]()
+<img width="1920" height="1080" alt="image" src="https://github.com/user-attachments/assets/4e4ffde5-e1be-4be5-98dc-40ce05f1af0a" />
 
 After identifying the correct candidate from the responses above, that key was reused as the HS256 signing secret to forge a token with `"sub": "administrator"`, which was sent to `/admin` and returned a 200 response, confirming privilege escalation. The lab was solved by deleting `carlos` from the resulting admin panel.
 
