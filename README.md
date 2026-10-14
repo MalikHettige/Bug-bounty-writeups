@@ -7,6 +7,7 @@ Writeups from my bug bounty hunting practice and live findings. Focus: IDOR, bro
 - [JWT authentication bypass via JKU header injection](https://github.com/MalikHettige/Bug-bounty-writeups/blob/main/JWT/labs/Lab%20-%20JWT%20authentication%20bypass%20via%20jku%20header%20injection.md)
 - [Username enumeration via account lock](https://github.com/MalikHettige/Bug-bounty-writeups/blob/main/authentication/labs/Lab%20-%20Username%20enumeration%20via%20account%20lock.md)
 - [Insufficient workflow validation](https://github.com/MalikHettige/Bug-bounty-writeups/blob/main/business-logic/Labs/lab%20-%20Insufficient%20Workflow%20Validation.md)
+- [SSPP in query string](https://github.com/MalikHettige/Bug-bounty-writeups/blob/main/API-testing/labs/lab%20-%20Exploiting%20Server-Side%20Parameter%20Pollution%20in%20a%20Query%20String.md)
 
 ---
 ## What's in here
