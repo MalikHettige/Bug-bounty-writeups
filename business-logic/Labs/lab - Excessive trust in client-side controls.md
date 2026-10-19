@@ -33,8 +33,9 @@ Notice that two `POST /cart`requests appear in the proxy history. One contains o
 **Proof of Concept**
 
 <img width="1373" height="575" alt="image" src="https://github.com/user-attachments/assets/9ff58ccd-5865-4ea1-aa4a-92432067be9e" />
+<img width="1920" height="1080" alt="image" src="https://github.com/user-attachments/assets/c695dd3b-f931-4703-9f37-e54a0dd370b6" />
 
-
+**One thing worth banking:** the Price column still shows $1337.00, but Total is $0.26. The catalog display and the charged amount are reading from two different places — your injected price got stored in the cart/session state at add-to-cart time and was never re-validated against the catalog at checkout. That’s the actual root cause, not just “price param was editable.” On a real target that distinction matters: it tells you the flaw is in when the price gets fixed (write-once-at-add, no recheck-at-charge), which is the same bug class you’ll hit in subscription upgrades, cart-to-invoice flows, anything with a staged total. Worth the one line in your notes.
 ## Root Cause
 
 The server trusted a client-controlled `price` parameter instead of determining the product price from a trusted server-side source. Because pricing logic was enforced only on the client, an attacker could tamper with the request and purchase products below their intended cost.
