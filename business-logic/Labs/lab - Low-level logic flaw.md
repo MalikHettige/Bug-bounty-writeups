@@ -35,9 +35,9 @@ At 32,123 jackets, the line-item calculation is:
 
 The belt adds `790 × 161 = 127,190` cents, leaving a final total of `4,994` cents ($49.94). The application accepted the order and reduced the account's store credit from $100.00 to $50.06.
 
-<img width="1920" height="1080" alt="Cart showing the overflowed jacket quantity, belt quantity, and reduced total" src="Assets/low-level-logic-flaw-cart.png" />
+<img width="1920" height="1080" alt="Cart showing the overflowed jacket quantity, belt quantity, and reduced total; terminal panel redacted to remove session-cookie data" src="https://github.com/user-attachments/assets/4504f391-957d-4a30-bc66-f9217d815688" />
 
-<img width="1920" height="1080" alt="PortSwigger lab confirming the order was completed at the manipulated total" src="Assets/low-level-logic-flaw-order-confirmed.png" />
+<img width="1920" height="1080" alt="PortSwigger lab confirming the order was completed at the manipulated total" src="https://github.com/user-attachments/assets/dd3605de-a287-4c02-9ef0-447c5c1fc53f" />
 
 ## Root Cause
 
