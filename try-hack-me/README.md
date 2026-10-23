@@ -1,5 +1,6 @@
 # TryHackMe Room Notes
-Directory created: 23:10:2026
+**Directory created:** 23:10:2026
+
 Notes and technical breakdowns from TryHackMe rooms, written up as I complete them — covering the underlying vulnerability, root cause, exploitation steps, and detection/mitigation, not just room walkthrough answers.
 
 ## Purpose
