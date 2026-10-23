@@ -27,6 +27,7 @@ Writeups from my bug bounty hunting practice and live findings. Focus: IDOR, bro
   
 ## Vulnerability Focus (the foundation)
 - [Business Logic](https://github.com/MalikHettige/Bug-bounty-writeups/tree/main/business-logic)
+- [OS Command Injection](https://github.com/MalikHettige/Bug-bounty-writeups/tree/main/OS-command-injection)
 - [Authentication](https://github.com/MalikHettige/Bug-bounty-writeups/tree/main/authentication)
 - [Access Control (keep warm)](https://github.com/MalikHettige/Bug-bounty-writeups/tree/main/access-control-idor)
 - [Classic Request Smuggling (do this before the CRLF paper)](https://portswigger.net/web-security/request-smuggling)
