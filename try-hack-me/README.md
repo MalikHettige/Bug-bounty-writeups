@@ -1,5 +1,5 @@
 # TryHackMe Room Notes
-
+Directory created: 23:10:2026
 Notes and technical breakdowns from TryHackMe rooms, written up as I complete them — covering the underlying vulnerability, root cause, exploitation steps, and detection/mitigation, not just room walkthrough answers.
 
 ## Purpose
@@ -25,7 +25,7 @@ Each file generally covers:
 
 | Room | Vulnerability | CVE(s) | Status |
 |---|---|---|---|
-| PHP2Shell | PHP runtime memory corruption → unauthenticated RCE | CVE-2026-109618, CVE-2026-109619 | Complete |
+| PHP2Shell | [PHP runtime memory corruption → unauthenticated RCE](https://github.com/MalikHettige/Bug-bounty-writeups/blob/main/try-hack-me/PHP2Shell%20-%20Room%20Notes.md) | CVE-2026-109618, CVE-2026-109619 | Complete |
 
 ## Note
 
