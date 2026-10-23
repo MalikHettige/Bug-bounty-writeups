@@ -7,6 +7,7 @@ This learning path documents command injection in application features that pass
 - [OS command injection, simple case](<labs/lab - OS command injection, simple case.md>)
 - [Blind OS command injection with time delays](<labs/lab - Blind OS command injection with time delays.md>)
 - [Blind OS command injection with output redirection](<labs/lab - Blind OS command injection with output redirection.md>)
+- [Blind OS Command Injection with Out-of-Band Interaction](https://github.com/MalikHettige/Bug-bounty-writeups/blob/malikhettige-lab-report-loop/OS-command-injection/labs/lab%20-%20Blind%20OS%20Command%20Injection%20with%20Out-of-Band%20Interaction.md)
 
 ## Assets
 
