@@ -10,6 +10,7 @@ upload handling, storage, and retrieval.
 ## Labs
 
 - [Remote code execution via web shell upload](labs/Lab%20-%20Remote%20code%20execution%20via%20web%20shell%20upload.md)
+- [Web shell upload via Content-Type restriction bypass](labs/Lab%20-%20Web%20shell%20upload%20via%20Content-Type%20restriction%20bypass.md)
 
 ## Key concepts
 
