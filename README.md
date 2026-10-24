@@ -11,6 +11,7 @@ Writeups from my bug bounty hunting practice and live findings. Focus: IDOR, bro
 - [SSPP in query string](https://github.com/MalikHettige/Bug-bounty-writeups/blob/main/API-testing/labs/lab%20-%20Exploiting%20Server-Side%20Parameter%20Pollution%20in%20a%20Query%20String.md)
 - [Remote code execution via web shell upload](file-upload/labs/Lab%20-%20Remote%20code%20execution%20via%20web%20shell%20upload.md)
 - [Web shell upload via Content-Type restriction bypass](file-upload/labs/Lab%20-%20Web%20shell%20upload%20via%20Content-Type%20restriction%20bypass.md)
+- [Web shell upload via path traversal](file-upload/labs/Lab%20-%20Web%20shell%20upload%20via%20path%20traversal.md)
 - [PHP Upload Security Testing Reference](resources/php-upload-security-testing.md)
 
 ---
