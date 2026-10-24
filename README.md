@@ -9,6 +9,7 @@ Writeups from my bug bounty hunting practice and live findings. Focus: IDOR, bro
 - [User role controlled by request parameter manipulation](https://github.com/MalikHettige/Bug-bounty-writeups/blob/main/access-control-idor/labs/Lab%20-%20User%20role%20controlled%20by%20request%20parameter.md)
 - [Insufficient workflow validation](https://github.com/MalikHettige/Bug-bounty-writeups/blob/main/business-logic/Labs/lab%20-%20Insufficient%20Workflow%20Validation.md)
 - [SSPP in query string](https://github.com/MalikHettige/Bug-bounty-writeups/blob/main/API-testing/labs/lab%20-%20Exploiting%20Server-Side%20Parameter%20Pollution%20in%20a%20Query%20String.md)
+- [Remote code execution via web shell upload](file-upload/labs/Lab%20-%20Remote%20code%20execution%20via%20web%20shell%20upload.md)
 
 ---
 ## What's in here
@@ -39,6 +40,7 @@ Writeups from my bug bounty hunting practice and live findings. Focus: IDOR, bro
 | P0 | Authentication | Session/identity mechanics under Stage 2 |
 | P0 | Business logic vulnerabilities | Stage 5 |
 | P0 | Server-side template injection | Direct foundation under blind SSTI/RCE |
+| P1 | [File upload vulnerabilities](file-upload/) | Understand validation, storage, and execution risks in upload workflows |
 | P1 | SQL injection, especially the blind techniques | This is the actual intellectual root of both the SSTI paper and the ORM-Leak exfil technique — error-based/boolean-based oracle-hunting is one skill applied twice |
 | P1 | Server-side prototype pollution | RCE fallback path |
 | P1 | OAuth authentication | Identity-flow foundation that transfers conceptually toward SAML, even though SAML itself isn't in Academy |
