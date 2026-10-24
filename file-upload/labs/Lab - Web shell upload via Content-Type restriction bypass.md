@@ -70,6 +70,10 @@ Cookie: session=<authorized-lab-session>
 the uploaded `.php` path returned `HTTP/2 200 OK` with the lab secret in the
 response body. The secret is intentionally redacted.
 
+For a defensive checklist on validating uploads and confirming that retrieved
+files are handled as inert data, see the [PHP Upload Security Testing
+Reference](../../resources/php-upload-security-testing.md).
+
 ## Root Cause
 
 The server treated the multipart part's client-supplied `Content-Type` as

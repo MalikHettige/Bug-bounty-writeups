@@ -24,6 +24,10 @@ upload handling, storage, and retrieval.
 - Generate storage names server-side, enforce authorization and CSRF protection,
   and run upload processing with least privilege.
 
+## Defensive testing reference
+
+- [PHP Upload Security Testing Reference](../resources/php-upload-security-testing.md)
+
 ## References
 
 - [PortSwigger: File upload vulnerabilities](https://portswigger.net/web-security/file-upload)
