@@ -41,7 +41,7 @@ Sensitive functionality should never depend on hidden URLs as a security mechani
 ## Impact
 
 - **Technical:** Any user with can potentially access restricted endpoints, discover hidden administrator-specific functionalities.
-- **Business / Real-World:** Such successful exploitations could allow attackers to take authorized administrative actions, delete or altar accounts and could even lead to integrity and availibility issues.
+- **Business / Real-World:** Such successful exploitations could allow attackers to take authorized administrative actions, delete or altar accounts and could even lead to integrity and availability issues.
 - **Scope:** The vulnerability effects any restricted endpoints like administrative path where the URL is exposed through client-side resources without server-side authorization checks.
 
 ## Remediation
