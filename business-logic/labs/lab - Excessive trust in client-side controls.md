@@ -1,0 +1,62 @@
+**Platform/Program :** PortSwigger Web Security Academy
+
+**Lab:** Excessive trust in client-side controls
+
+**Date Solved:** 2026-08-07
+
+**Difficulty:** Apprentice  
+
+**Severity:** High
+
+## Summary
+
+The application trusted a client-supplied `price` parameter when processing cart items. By intercepting and modifying this value before checkout, an attacker could purchase products for an arbitrary price, bypassing intended pricing logic.
+
+## Affected Component
+
+`POST /cart` 
+
+## Steps to Reproduce
+
+1. Log in as wiener (password:peter)
+2. Navigate to the homepage and locate the leather jacket
+3. Click view details and add it to cart
+4. Go to Burp>proxy>http history and locate the POST request
+
+Notice that two `POST /cart`requests appear in the proxy history. One contains only quantity updates, while the other includes the client-supplied `price` parameter.
+
+1. Find the POST request with the price parameter included and send it to repeater
+2. Modify the value of price to something less than the available balance (>$100) 
+3. Go to browser, refresh the page and observe the modification worked
+4. Place the order and solve the lab
+
+**Proof of Concept**
+
+<img width="1373" height="575" alt="image" src="https://github.com/user-attachments/assets/9ff58ccd-5865-4ea1-aa4a-92432067be9e" />
+<img width="1920" height="1080" alt="image" src="https://github.com/user-attachments/assets/c695dd3b-f931-4703-9f37-e54a0dd370b6" />
+
+**One thing worth banking:** the Price column still shows $1337.00, but Total is $0.26. The catalog display and the charged amount are reading from two different places — my injected price got stored in the `cart/session` state at **add-to-cart** time and was never re-validated against the catalog at checkout. That’s the actual root cause. 
+
+## Root Cause
+
+The server trusted a client-controlled `price` parameter instead of determining the product price from a trusted server-side source. Because pricing logic was enforced only on the client, an attacker could tamper with the request and purchase products below their intended cost.
+
+## Impact
+
+- **Technical:** An attacker can arbitrarily modify the purchase price of products by tampering with client-side requests.
+- **Business / Real-World:** This could result in unauthorized discounts, financial loss, abuse of promotional workflows, and loss of integrity of the purchasing process.
+- **Scope:** All products whose prices are derived from client-controlled values.
+
+## Remediation
+
+Do not trust client-supplied pricing information. Determine product prices exclusively on the server using the product identifier, ignore any client-supplied price field  and  make sure to validate the final order total before completing checkout.
+
+## Lessons Learned & Patterns
+
+- Never assume business-critical values are enforced server-side.
+- Inspect every request in a workflow; similar-looking requests may have different purposes.
+- A single user action may generate multiple HTTP requests.
+- Hidden parameters are often more interesting than visible ones.
+- When a lab mentions "client-side controls", inspect both requests and responses for client-controlled business values.
+
+**Tags:** #PortSwigger #business-logic #lab
