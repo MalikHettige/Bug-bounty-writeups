@@ -52,16 +52,7 @@ The blog application's user management runs through a single `POST /graphql/v1` 
 
 ## Proof of Concept
 
-**Query sent (GraphQL editor, Burp Repeater):**
-```graphql
-query {
-  getUser(id: 1) {
-    id
-    username
-    password
-  }
-}
-```
+**Query sent (Burp Repeater):**
 
 **Response:**
 ```json
@@ -70,22 +61,16 @@ query {
     "getUser": {
       "id": 1,
       "username": "administrator",
-      "password": "4hk7qijheburto5kmhyf"
+      "password": "[REDACTED]"
     }
   }
 }
 ```
 
 Screenshot of the confirmed request/response pair:
-
 ![getUser query returning administrator's plaintext password](../assets/accidental-exposure-private-fields-getuser-password-poc.png)
 
-Relevant portion of the introspected SDL schema showing `password` as a queryable field on the `User` output type:
-
-![SDL schema showing User type with password field](../assets/accidental-exposure-private-fields-sdl-schema.png)
-
-Lab banner confirming solved status after deleting `carlos` as the administrator:
-
+**Lab banner confirming solved status after deleting `carlos` as the administrator:**
 ![Lab solved banner showing carlos deleted](../assets/accidental-exposure-private-fields-lab-solved.png)
 
 ## Root Cause
