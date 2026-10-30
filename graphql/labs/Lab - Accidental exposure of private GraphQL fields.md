@@ -67,9 +67,6 @@ The blog application's user management runs through a single `POST /graphql/v1` 
 }
 ```
 
-Screenshot of the confirmed request/response pair:
-![getUser query returning administrator's plaintext password](../assets/accidental-exposure-private-fields-getuser-password-poc.png)
-
 **Lab banner confirming solved status after deleting `carlos` as the administrator:**
 ![Lab solved banner showing carlos deleted](../assets/accidental-exposure-private-fields-lab-solved.png)
 
