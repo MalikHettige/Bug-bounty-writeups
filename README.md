@@ -14,6 +14,7 @@ Writeups from my bug bounty hunting practice and live findings. Focus: IDOR, bro
 - [Manipulating the WebSocket handshake to exploit vulnerabilities](https://github.com/MalikHettige/Bug-bounty-writeups/blob/malikhettige-lab-report-loop/WebSockets/labs/Lab%20-%20Manipulating%20the%20WebSocket%20handshake%20to%20exploit%20vulnerabilities.md)
 - [Forced auth profile linking](https://github.com/MalikHettige/Bug-bounty-writeups/blob/malikhettige-lab-report-loop/OAuth-2.0/labs/Lab%20-%20Forced%20OAuth%20profile%20linking.md)\
 - [Stealing OAuth access tokens via an open redirect](https://github.com/MalikHettige/Bug-bounty-writeups/blob/malikhettige-lab-report-loop/OAuth-2.0/labs/lab%20-%20Stealing%20OAuth%20Access%20Tokens%20via%20an%20Open%20Redirect.md)
+- [Stealing OAuth access tokens via a proxy page](https://github.com/MalikHettige/Bug-bounty-writeups/blob/malikhettige-lab-report-loop/OAuth-2.0/labs/Lab%20-%20Stealing%20OAuth%20Access%20Tokens%20via%20a%20Proxy%20Page.md) — **OAuth 2.0 learning path complete**
 
 ---
 ## What's in here
