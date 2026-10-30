@@ -1,10 +1,10 @@
 # Accidental Exposure of Private GraphQL Fields
 
-**Platform:** PortSwigger Web Security Academy
-**Category:** API Security / GraphQL / Access Control
-**Difficulty:** Practitioner
-**Date Solved:** 2026-10-30
-**Severity:** Critical
+**Platform:** PortSwigger Web Security Academy<br>
+**Category:** API Security / GraphQL / Access Control<br>
+**Difficulty:** Practitioner<br>
+**Date Solved:** 2026-10-30<br>
+**Severity:** Critical<br>
 
 ## Summary
 
