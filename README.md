@@ -1,65 +1,84 @@
-# Bug Bounty Writeups — Malik Hettige, 17
-Writeups from my bug bounty hunting practice and live findings. Focus: IDOR, broken access control, authentication, business logic as foundation for now.
+# Bug Bounty Writeups
 
-**View My Live Bug Bounty Hunting Reports [(Bug-bounty-reports)](https://github.com/MalikHettige/Bug-bounty-reports)**
+Writeups from hands-on web security training and live bug bounty work, written by **Malik Hettige**. Core focus: **IDOR / broken access control, authentication, and business logic vulnerabilities** as the foundation, built on top of a structured path through PortSwigger's Web Security Academy.
 
-**Highlights:**
-- [JWT authentication bypass via JKU header injection](https://github.com/MalikHettige/Bug-bounty-writeups/blob/main/JWT/labs/Lab%20-%20JWT%20authentication%20bypass%20via%20jku%20header%20injection.md)
-- [Username enumeration via account lock](https://github.com/MalikHettige/Bug-bounty-writeups/blob/main/authentication/labs/Lab%20-%20Username%20enumeration%20via%20account%20lock.md)
-- [User role controlled by request parameter manipulation](https://github.com/MalikHettige/Bug-bounty-writeups/blob/main/access-control-idor/labs/Lab%20-%20User%20role%20controlled%20by%20request%20parameter.md)
-- [Insufficient workflow validation](https://github.com/MalikHettige/Bug-bounty-writeups/blob/main/business-logic/Labs/lab%20-%20Insufficient%20Workflow%20Validation.md)
-- [SSPP in query string](https://github.com/MalikHettige/Bug-bounty-writeups/blob/main/API-testing/labs/lab%20-%20Exploiting%20Server-Side%20Parameter%20Pollution%20in%20a%20Query%20String.md)
-- [Web shell upload via Content-Type restriction bypass](file-upload/labs/Lab%20-%20Web%20shell%20upload%20via%20Content-Type%20restriction%20bypass.md)
-- [PHP Upload Security Testing Reference](resources/php-upload-security-testing.md)
-- [Manipulating the WebSocket handshake to exploit vulnerabilities](https://github.com/MalikHettige/Bug-bounty-writeups/blob/malikhettige-lab-report-loop/WebSockets/labs/Lab%20-%20Manipulating%20the%20WebSocket%20handshake%20to%20exploit%20vulnerabilities.md)
-- [Forced auth profile linking](https://github.com/MalikHettige/Bug-bounty-writeups/blob/malikhettige-lab-report-loop/OAuth-2.0/labs/Lab%20-%20Forced%20OAuth%20profile%20linking.md)\
-- [Stealing OAuth access tokens via an open redirect](https://github.com/MalikHettige/Bug-bounty-writeups/blob/malikhettige-lab-report-loop/OAuth-2.0/labs/lab%20-%20Stealing%20OAuth%20Access%20Tokens%20via%20an%20Open%20Redirect.md)
-- [Stealing OAuth access tokens via a proxy page](https://github.com/MalikHettige/Bug-bounty-writeups/blob/malikhettige-lab-report-loop/OAuth-2.0/labs/Lab%20-%20Stealing%20OAuth%20Access%20Tokens%20via%20a%20Proxy%20Page.md) — **OAuth 2.0 learning path complete**
+Every writeup follows the same format: summary, affected component, step-by-step reproduction, proof of concept, root cause, impact (technical + business), remediation, and lessons learned — not just "here's the bug," but the actual methodology and reasoning behind finding it, so the pattern transfers to real targets.
+
+**Live bug bounty reports (real programs):** [Bug-bounty-reports](https://github.com/MalikHettige/Bug-bounty-reports)
+**Research notes (external writeups, deep-dives):** [Research-notes](https://github.com/MalikHettige/Research-notes)
 
 ---
-## What's in here
-- Mainly [portswigger-labs](https://github.com/MalikHettige/Bug-bounty-writeups/tree/main/portswigger-labs) — PortSwigger Web Security Academy writeups, organized by vulnerability category.
-- [Hack The Box Academy](https://github.com/MalikHettige/Bug-bounty-writeups/tree/main/hack-the-box-academy) — Academy module notes and hands-on labs.
-- `tryhackme/` — Web Fundamentals and web security learning notes.
-- `pentesterlab/` — PentesterLab exercise writeups and notes.
-- `overthewire/` — Linux and command-line challenge writeups.
-- `burp-suite-certified-practitioner/` — Exam preparation notes, labs, and methodology.
-- [bug-hunter-skill-progression/](https://github.com/MalikHettige/Bug-bounty-writeups/tree/main/bug-hunter-skill-progression) — Personal roadmap, checklists, and progress tracking.
-- `random-lessons/` — Security concepts, research notes, and miscellaneous documentation.
-- `writeup-template.md` — Standard template used for documenting writeups.
-- `README.md` — Repository overview and structure.
-- `LICENSE` — MIT License for this repository.
-- `.gitignore` — Excludes unnecessary files from version control.
-  
-## Vulnerability Focus (the foundation)
-- [Business Logic](https://github.com/MalikHettige/Bug-bounty-writeups/tree/main/business-logic)
-- [OS Command Injection](https://github.com/MalikHettige/Bug-bounty-writeups/tree/main/OS-command-injection)
-- [Authentication](https://github.com/MalikHettige/Bug-bounty-writeups/tree/main/authentication)
-- [Access Control (keep warm)](https://github.com/MalikHettige/Bug-bounty-writeups/tree/main/access-control-idor)
-- [Classic Request Smuggling (do this before the CRLF paper)](https://portswigger.net/web-security/request-smuggling)
 
-# Learning paths from PortSwigger, tiered
+## Learning paths
 
-| Priority | Path | Why it matters here |
+### Completed
+| Path | Labs |
+| --- | --- |
+| **OAuth 2.0** | [Authentication bypass via implicit flow](OAuth-2.0/labs/Lab%20-%20Authentication%20bypass%20via%20OAuth%20implicit%20flow.md) · [Account hijacking via redirect_uri](<OAuth-2.0/labs/Lab - OAuth account hijacking via redirect_uri.md>) · [Forced profile linking](<OAuth-2.0/labs/Lab - Forced OAuth profile linking.md>) · [SSRF via OpenID dynamic client registration](<OAuth-2.0/labs/Lab - SSRF via OpenID dynamic client registration.md>) · [Stealing tokens via open redirect](<OAuth-2.0/labs/lab - Stealing OAuth Access Tokens via an Open Redirect.md>) · [Stealing tokens via proxy page](<OAuth-2.0/labs/Lab - Stealing OAuth Access Tokens via a Proxy Page.md>) |
+| **GraphQL** | [Accessing private posts](<graphql/labs/Lab - Accessing private GraphQL posts.md>) · [Accidental field exposure](<graphql/labs/Lab - Accidental exposure of private GraphQL fields.md>) · [Hidden endpoint discovery](<graphql/labs/Lab - Finding a hidden GraphQL endpoint.md>) · [Brute-force bypass via aliasing](<graphql/labs/Lab - Bypassing GraphQL brute force protections.md>) · [CSRF via content-type confusion](<graphql/labs/Lab - Performing CSRF exploits over GraphQL.md>) |
+
+### In progress
+| Path | Labs so far |
+| --- | --- |
+| **HTTP Host Header Attacks** | [Password reset poisoning via Host header injection](<host-header-attacks/labs/Lab - Basic password reset poisoning via Host header injection.md>) |
+
+### Queued (priority order)
+| Priority | Path | Why it matters |
 | --- | --- | --- |
-| P0 | HTTP Request Smuggling | Direct foundation under CRLF desync |
-| P0 | Authentication | Session/identity mechanics under Stage 2 |
-| P0 | Business logic vulnerabilities | Stage 5 |
-| P0 | Server-side template injection | Direct foundation under blind SSTI/RCE |
-| P1 | [File upload vulnerabilities](file-upload/) | Understand validation, storage, and execution risks in upload workflows |
-| P1 | SQL injection, especially the blind techniques | This is the actual intellectual root of both the SSTI paper and the ORM-Leak exfil technique — error-based/boolean-based oracle-hunting is one skill applied twice |
+| P0 | HTTP Request Smuggling | Foundation under CRLF/desync attacks |
+| P0 | Authentication | Session/identity mechanics |
+| P0 | Business logic vulnerabilities | Core focus area |
+| P0 | Server-side template injection | Foundation under blind SSTI → RCE |
+| P1 | [File upload vulnerabilities](file-upload/) | Validation, storage, execution risks in upload flows |
+| P1 | SQL injection (blind techniques especially) | Oracle-hunting skill shared with SSTI/ORM-leak exfiltration |
 | P1 | Server-side prototype pollution | RCE fallback path |
-| P1 | OAuth authentication | Identity-flow foundation that transfers conceptually toward SAML, even though SAML itself isn't in Academy |
-| P1 | JWT | Token/identity foundation, connects to my existing playbook material |
-| P2 | Web cache poisoning | Pairs naturally with smuggling |
-| P2 | SSRF | Cloud/internal pivoting — matches interests I've already shown |
-| P2 | Insecure deserialization | General "reach RCE through object handling" pattern, complements the RCE course already in my Notion |
+| P1 | JWT | Token/identity foundation |
+| P2 | Web cache poisoning | Pairs with request smuggling |
+| P2 | SSRF | Cloud/internal network pivoting |
+| P2 | Insecure deserialization | General object-handling → RCE pattern |
+
+---
+
+## Repository structure
+
+```
+.
+├── access-control-idor/     # IDOR, broken access control
+├── API-testing/              # Mass assignment, SSPP, API endpoint abuse
+├── authentication/            # 2FA bypass, brute-force, password reset
+├── business-logic/            # Workflow/logic flaws
+├── CORS/                      # CORS misconfiguration
+├── file-upload/                # Web shell upload, RCE via upload
+├── graphql/                    # GraphQL-specific vulnerabilities
+├── host-header-attacks/        # Host header trust failures
+├── JWT/                         # JWT forgery, signature bypass
+├── OAuth-2.0/                   # OAuth flow abuse, token theft
+├── OS-command-injection/         # OS command injection
+├── path-traversal/               # File path traversal
+├── sql/                            # SQL injection
+├── WebSockets/                     # WebSocket handshake/message manipulation
+├── bug-hunter-skill-progression/    # Personal roadmap and skill tracking
+├── hack-the-box-academy/             # HTB Academy module notes
+├── try-hack-me/                       # TryHackMe notes
+├── resources/                          # Reference material (e.g. PHP upload security)
+├── writeup-template.md                 # Standard writeup template
+└── LICENSE
+```
+
+Each vulnerability-class folder follows the same pattern: `<category>/labs/Lab - <name>.md`, with a sibling `assets/` folder for PoC screenshots where used.
+
+---
+
+## Methodology
+
+Writeups prioritize **chaining over single-bug reporting** for critical-severity targets — training to recognize how a low-impact finding (an open redirect, an over-exposed field, a header trust failure) becomes a full account takeover when combined with a second weakness. Submission strategy on live programs is mixed-severity: valid findings get reported as soon as they're confirmed rather than held for a bigger chain.
 
 ## Platforms
-- Bugcrowd  (active from January 2027)
-- HackerOne (active from January 2027)
-- Intigriti (active from January 2027)
+- Bugcrowd, HackerOne, Intigriti, HackenProof, YesWeHack
 
 ## Contact
-- X: [My X handle](https://x.com/MalikHettige)
-- Email: Malikdishan09@gmail.com
+- X: [@MalikHettige](https://x.com/MalikHettige)
+- Email: malikdishan09@gmail.com
+
+## License
+MIT — see [LICENSE](LICENSE).
