@@ -15,6 +15,7 @@ Writeups from my bug bounty hunting practice and live findings. Focus: IDOR, bro
 - [Forced auth profile linking](https://github.com/MalikHettige/Bug-bounty-writeups/blob/malikhettige-lab-report-loop/OAuth-2.0/labs/Lab%20-%20Forced%20OAuth%20profile%20linking.md)\
 - [Stealing OAuth access tokens via an open redirect](https://github.com/MalikHettige/Bug-bounty-writeups/blob/malikhettige-lab-report-loop/OAuth-2.0/labs/lab%20-%20Stealing%20OAuth%20Access%20Tokens%20via%20an%20Open%20Redirect.md)
 - [Stealing OAuth access tokens via a proxy page](https://github.com/MalikHettige/Bug-bounty-writeups/blob/malikhettige-lab-report-loop/OAuth-2.0/labs/Lab%20-%20Stealing%20OAuth%20Access%20Tokens%20via%20a%20Proxy%20Page.md) — **OAuth 2.0 learning path complete**
+- [Basic password reset poisoning](https://github.com/MalikHettige/Bug-bounty-writeups/blob/malikhettige-lab-report-loop/host-header-attacks/labs/Lab%20-%20Basic%20password%20reset%20poisoning%20via%20Host%20header%20injection.md)
 
 ---
 ## What's in here
