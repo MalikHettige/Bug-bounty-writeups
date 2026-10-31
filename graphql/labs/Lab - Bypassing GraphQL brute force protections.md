@@ -1,10 +1,10 @@
 # Bypassing GraphQL Brute Force Protections via Query Aliasing
 
-**Platform:** PortSwigger Web Security Academy
-**Category:** API Security / Rate Limiting / Authentication
-**Difficulty:** Practitioner
-**Date Solved:** 2026-10-31
-**Severity:** Critical
+**Platform:** PortSwigger Web Security Academy <br>
+**Category:** API Security / Rate Limiting / Authentication<br>
+**Difficulty:** Practitioner<br>
+**Date Solved:** 2026-10-31<br>
+**Severity:** Critical<br>
 
 ## Summary
 
