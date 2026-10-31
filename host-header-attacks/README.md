@@ -5,6 +5,7 @@ Writeups on vulnerabilities arising from applications trusting the client-suppli
 ## Labs
 
 - [Basic password reset poisoning via Host header injection](<labs/Lab - Basic password reset poisoning via Host header injection.md>) — Full unauthenticated account takeover: the password reset endpoint accepts an arbitrary username and trusts the `Host` header to build the reset link, letting an attacker redirect a victim's real reset token to attacker-controlled infrastructure with zero victim interaction.
+- [Host header authentication bypass](<labs/Lab - Host header authentication bypass.md>) — Admin panel access control gated on `Host: localhost` as a stand-in for verified internal network origin. Setting that header externally grants full admin read/write access, including arbitrary user deletion, from an unauthenticated public position.
 
 ## Core idea
 
