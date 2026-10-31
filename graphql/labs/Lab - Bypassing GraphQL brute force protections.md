@@ -50,11 +50,11 @@ The application's login mechanism is powered by a GraphQL mutation protected by 
 
 **Rate limit confirmed on individual requests** — after only 3 single-attempt login mutations sent one at a time, the server stopped returning normal authentication failures and instead returned a rate-limit error (`"You have made too many incorrect login attempts. Please try again in 1 minute(s)."`), confirming the protection is live and triggers quickly under normal per-request submission:
 
-![GraphQL login mutation rate-limited after 3 individual attempts](../assets/graphql-brute-force-rate-limit-confirmed.png)
+![Aliased batch login request returning success:true for one of the ~100 bundled password attempts](../assets/graphql-brute-force-aliasing-success.png)
 
 **Aliased batch bypass — brute force succeeded.** A single HTTP request bundling ~100 aliased `login` calls (one unique alias per candidate password) was sent as one request. The rate limiter never triggered, since it only counts HTTP requests, not the operations executed inside one. Searching the full response for `"success": true` located the successful attempt, `bruteforce28`, revealing the victim `carlos`'s correct password:
 
-![Aliased batch login request returning success:true for one of the ~100 bundled password attempts](../assets/graphql-brute-force-aliasing-success.png)
+![GraphQL login mutation rate-limited after 3 individual attempts](../assets/graphql-brute-force-rate-limit-confirmed.png)
 
 Manual login with the recovered credentials (`carlos` / the password from the successful alias) confirmed successful authentication and solved the lab.
 
