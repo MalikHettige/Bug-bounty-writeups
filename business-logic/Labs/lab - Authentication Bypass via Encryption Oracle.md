@@ -2,7 +2,7 @@
 
 **Platform:** PortSwigger Web Security Academy
 
-**Category:** Authentication
+**Category:** Business Logic
 
 **Difficulty:** Expert
 
