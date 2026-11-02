@@ -1,14 +1,10 @@
 # Authentication Bypass via Encryption Oracle
 
-**Platform:** PortSwigger Web Security Academy
-
-**Category:** Business Logic
-
-**Difficulty:** Expert
-
-**Date Solved:** YYYY-MM-DD
-
-**Severity:** Critical
+**Platform:** PortSwigger Web Security Academy<br>
+**Category:** Business Logic<br>
+**Difficulty:** Expert<br>
+**Date Solved:** 2026-11-02<br>
+**Severity:** Critical<br>
 
 ## Summary
 
