@@ -1,14 +1,10 @@
 # Integer Overflow in Cart Pricing Logic
 
-**Platform:** PortSwigger Web Security Academy
-
-**Category:** Business Logic
-
-**Difficulty:** Practitioner
-
-**Date Solved:** YYYY-MM-DD
-
-**Severity:** High
+**Platform:** PortSwigger Web Security Academy<br>
+**Category:** Business Logic<br>
+**Difficulty:** Practitioner<br>
+**Date Solved:** 2026-11-03<br>
+**Severity:** High<br>
 
 ## Summary
 
