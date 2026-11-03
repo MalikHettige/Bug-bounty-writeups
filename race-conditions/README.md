@@ -18,8 +18,8 @@ $10k by June is the #1 priority. Anything valid found in real engagements gets r
 
 | # | Lab | Difficulty | Status |
 |---|-----|------------|--------|
-| 1 | [Limit overrun race conditions](https://portswigger.net/web-security/race-conditions/lab-race-conditions) | Apprentice | Not solved |
-| 2 | [Bypassing rate limits via race conditions](https://portswigger.net/web-security/race-conditions/lab-bypassing-rate-limits-via-race-conditions) | Practitioner | Not solved |
+| 1 | [Limit overrun race conditions](https://portswigger.net/web-security/race-conditions/lab-race-conditions) | Apprentice | Solved — [writeup](labs/01-limit-overrun-race-conditions.md) |
+| 2 | [Bypassing rate limits via race conditions](https://portswigger.net/web-security/race-conditions/lab-bypassing-rate-limits-via-race-conditions) | Practitioner | Solved — [writeup](labs/02-bypassing-rate-limits-via-race-conditions.md) |
 | 3 | [Multi-endpoint race conditions](https://portswigger.net/web-security/race-conditions/lab-multi-endpoint-race-conditions) | Practitioner | Not solved |
 | 4 | [Single-endpoint race conditions](https://portswigger.net/web-security/race-conditions/lab-single-endpoint-race-conditions) | Practitioner | Not solved |
 | 5 | [Exploiting time-sensitive vulnerabilities](https://portswigger.net/web-security/race-conditions/lab-exploiting-time-sensitive-vulnerabilities) | Practitioner | Not solved |
@@ -27,8 +27,8 @@ $10k by June is the #1 priority. Anything valid found in real engagements gets r
 
 ## Scripts
 
-_(none yet — this table gets updated the moment anything is added to `scripts/`)_
+`race-conditions/scripts/` in this repo stays empty on purpose. Anything built goes straight to the `MalikHettige/scripts-tools` repo instead and is linked here.
 
-| Script | Purpose |
-|--------|---------|
-| — | — |
+| Script | Purpose | Used in |
+|--------|---------|---------|
+| [race-single-packet-attack.py](https://github.com/MalikHettige/Scripts-tools/blob/main/race-conditions/Bypassing%20rate%20limits%20via%20race%20conditions/race-single-packet-attack.py) | Turbo Intruder single-packet burst (gate + `Engine.BURP2`) to race a check-then-increment login lockout counter | Lab 2 |
