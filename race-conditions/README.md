@@ -12,22 +12,21 @@ $10k by June is the #1 priority. Anything valid found in real engagements gets r
 
 - `labs/` — one Markdown writeup per PortSwigger lab, using the standard template (`writeup-template.md` on the `malikhettige-lab-report-loop` branch of this repo)
 - `assets/` — screenshot PoCs referenced by the writeups in `labs/`
-- `scripts/` — any Turbo Intruder scripts or standalone Python tooling built while solving these labs. If Burp Community can't do something natively (no single-packet button outside Pro), the workaround script lives here. **Reminder: every script added here must also be added to the Scripts list below, and a copy pushed to the `MalikHettige/scripts-tools` repo.**
+
+No `scripts/` folder here — any Turbo Intruder scripts or standalone Python tooling built while solving these labs goes straight to the `MalikHettige/scripts-tools` repo and is linked from the Scripts table below.
 
 ## Labs
 
 | # | Lab | Difficulty | Status |
 |---|-----|------------|--------|
-| 1 | [Limit overrun race conditions](https://portswigger.net/web-security/race-conditions/lab-race-conditions) | Apprentice | Solved — [writeup](labs/01-limit-overrun-race-conditions.md) |
-| 2 | [Bypassing rate limits via race conditions](https://portswigger.net/web-security/race-conditions/lab-bypassing-rate-limits-via-race-conditions) | Practitioner | Solved — [writeup](labs/02-bypassing-rate-limits-via-race-conditions.md) |
+| 1 | [Limit overrun race conditions](https://portswigger.net/web-security/race-conditions/lab-race-conditions) | Apprentice | Solved — [writeup](labs/lab-limit-overrun-race-conditions.md) |
+| 2 | [Bypassing rate limits via race conditions](https://portswigger.net/web-security/race-conditions/lab-bypassing-rate-limits-via-race-conditions) | Practitioner | Solved — [writeup](labs/lab-bypassing-rate-limits-via-race-conditions.md) |
 | 3 | [Multi-endpoint race conditions](https://portswigger.net/web-security/race-conditions/lab-multi-endpoint-race-conditions) | Practitioner | Not solved |
 | 4 | [Single-endpoint race conditions](https://portswigger.net/web-security/race-conditions/lab-single-endpoint-race-conditions) | Practitioner | Not solved |
 | 5 | [Exploiting time-sensitive vulnerabilities](https://portswigger.net/web-security/race-conditions/lab-exploiting-time-sensitive-vulnerabilities) | Practitioner | Not solved |
 | 6 | [Partial construction race conditions](https://portswigger.net/web-security/race-conditions/lab-partial-construction-race-conditions) | Expert | Not solved |
 
 ## Scripts
-
-`race-conditions/scripts/` in this repo stays empty on purpose. Anything built goes straight to the `MalikHettige/scripts-tools` repo instead and is linked here.
 
 | Script | Purpose | Used in |
 |--------|---------|---------|

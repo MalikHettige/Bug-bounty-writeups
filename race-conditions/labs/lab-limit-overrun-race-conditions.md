@@ -45,9 +45,9 @@ csrf=<redacted>&coupon=PROMO20
 - Responses: `HTTP/2 302 Found`, `Location: /cart`, body `Coupon applied`.
 - Result: order total dropped from $1337.00 to **$24.07**, paid with store credit (balance left: $25.93).
 
-![Burp Repeater group send — 20 requests fired in parallel over HTTP/2](../assets/01-limit-overrun-race-conditions-repeater-group-send.png)
+![Burp Repeater group send — 20 requests fired in parallel over HTTP/2](../assets/lab-limit-overrun-race-conditions-repeater-group-send.png)
 
-![Order confirmation — lab marked solved, jacket bought for $24.07](../assets/01-limit-overrun-race-conditions-order-confirmation.png)
+![Order confirmation — lab marked solved, jacket bought for $24.07](../assets/lab-limit-overrun-race-conditions-order-confirmation.png)
 
 ## Root Cause
 
