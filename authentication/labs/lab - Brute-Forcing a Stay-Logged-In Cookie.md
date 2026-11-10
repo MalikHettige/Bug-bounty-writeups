@@ -79,7 +79,7 @@ for password in passwords:
 
 ## Proof of Concept
 
-Python scirpt to decode: https://github.com/MalikHettige/Scripts-tools/blob/main/authentication/Brute-Forcing%20a%20Stay-Logged-In%20Cookie/stay-logged-in-decode.py
+Python script to decode: https://github.com/MalikHettige/Scripts-tools/blob/main/authentication/Brute-Forcing%20a%20Stay-Logged-In%20Cookie/stay-logged-in-decode.py
 
 Python script to brute: https://github.com/MalikHettige/Scripts-tools/blob/main/authentication/Brute-Forcing%20a%20Stay-Logged-In%20Cookie/stay-logged-in-brute.py
 
