@@ -9,10 +9,13 @@ Writeups from my bug bounty hunting practice and live findings. Focus: IDOR, bro
 - [User role controlled by request parameter manipulation](https://github.com/MalikHettige/Bug-bounty-writeups/blob/main/access-control-idor/labs/Lab%20-%20User%20role%20controlled%20by%20request%20parameter.md)
 - [Insufficient workflow validation](https://github.com/MalikHettige/Bug-bounty-writeups/blob/main/business-logic/Labs/lab%20-%20Insufficient%20Workflow%20Validation.md)
 - [SSPP in query string](https://github.com/MalikHettige/Bug-bounty-writeups/blob/main/API-testing/labs/lab%20-%20Exploiting%20Server-Side%20Parameter%20Pollution%20in%20a%20Query%20String.md)
-- [Remote code execution via web shell upload](file-upload/labs/Lab%20-%20Remote%20code%20execution%20via%20web%20shell%20upload.md)
 - [Web shell upload via Content-Type restriction bypass](file-upload/labs/Lab%20-%20Web%20shell%20upload%20via%20Content-Type%20restriction%20bypass.md)
-- [Web shell upload via path traversal](file-upload/labs/Lab%20-%20Web%20shell%20upload%20via%20path%20traversal.md)
 - [PHP Upload Security Testing Reference](resources/php-upload-security-testing.md)
+- [Manipulating the WebSocket handshake to exploit vulnerabilities](https://github.com/MalikHettige/Bug-bounty-writeups/blob/malikhettige-lab-report-loop/WebSockets/labs/Lab%20-%20Manipulating%20the%20WebSocket%20handshake%20to%20exploit%20vulnerabilities.md)
+- [Forced auth profile linking](https://github.com/MalikHettige/Bug-bounty-writeups/blob/malikhettige-lab-report-loop/OAuth-2.0/labs/Lab%20-%20Forced%20OAuth%20profile%20linking.md)\
+- [Stealing OAuth access tokens via an open redirect](https://github.com/MalikHettige/Bug-bounty-writeups/blob/malikhettige-lab-report-loop/OAuth-2.0/labs/lab%20-%20Stealing%20OAuth%20Access%20Tokens%20via%20an%20Open%20Redirect.md)
+- [Stealing OAuth access tokens via a proxy page](https://github.com/MalikHettige/Bug-bounty-writeups/blob/malikhettige-lab-report-loop/OAuth-2.0/labs/Lab%20-%20Stealing%20OAuth%20Access%20Tokens%20via%20a%20Proxy%20Page.md) — **OAuth 2.0 learning path complete**
+- [Basic password reset poisoning](https://github.com/MalikHettige/Bug-bounty-writeups/blob/malikhettige-lab-report-loop/host-header-attacks/labs/Lab%20-%20Basic%20password%20reset%20poisoning%20via%20Host%20header%20injection.md)
 
 ---
 ## What's in here
